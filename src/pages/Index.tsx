@@ -37,7 +37,6 @@ import agwu from "../assets/images/agwu.jpg";
 import khalid from "../assets/images/My Passport 20-01-2021.jpg";
 import { Gallery, Partners } from "../components/Galery";
 import Faq from "../components/Faq";
-import { Footer } from "../components/Footer";
 
 export default function Index() {
   return (
@@ -92,6 +91,7 @@ export default function Index() {
         </div>
       </div>
       <About />
+
       <Container size={"xl"} my={30}>
         <div className="grid gap-4 md:grid-cols-4">
           <div className="p-4 group hover:bg-cyan-700 shadow-cyan-700 hover:text-white rounded-md shadow-[0px_5px_20px_0px]">
@@ -481,7 +481,6 @@ export default function Index() {
       <div className="py-8 px-4 bg-cyan-500/10">
         <Faq />
       </div>
-      <Footer />
     </div>
   );
 }
@@ -495,7 +494,7 @@ interface CardProps {
   readMoreLink?: string;
   notVc?: boolean;
 }
-function StaffCard({
+export function StaffCard({
   Socials,
   name,
   note,

@@ -1,4 +1,4 @@
-import { Text, Container, ActionIcon, Group, rem, Image } from "@mantine/core";
+import { Container, ActionIcon, Group, rem, Image } from "@mantine/core";
 import {
   IconBrandTwitter,
   IconBrandYoutube,
@@ -33,27 +33,10 @@ const data = [
 ];
 
 export function Footer() {
-  const groups = data.map((group) => {
-    const links = group.links.map((link, index) => (
-      <Link key={index} className="hover:underline ml-8" to={link.link}>
-        {link.label}
-      </Link>
-    ));
-
-    return (
-      <div className={"flex flex-col gap-2"} key={group.title}>
-        <span className="flex text-lg font-bold justify-end">
-          {group.title}
-        </span>
-        {links}
-      </div>
-    );
-  });
-
   return (
-    <footer className={classes.footer}>
+    <footer className="pt-4 bg-gray-100">
       <Container className={classes.inner} size={"xl"}>
-        <div className="flex flex-col gap-2 text-2xl">
+        <div className="flex flex-col gap-2 text-xs">
           <Image src={logo} h={100} w={200} className="my-4" />
           <div className="flex flex-col gap-2">
             <span>No. 1 Garba Nadama Rd, Sokoto 840232, Nigeria</span>
@@ -61,10 +44,32 @@ export function Footer() {
             <span>Email: tce-un@udusok.edu.ng</span>
           </div>
         </div>
-        <div className={classes.groups}>{groups}</div>
+        <div>
+          <div className="md:flex gap-4 hidden">
+            {data.map((t) => (
+              <div>
+                <div className="font-bold my-4">{t.title}</div>
+                <div>
+                  {t.links.map((a) => (
+                    <ul>
+                      <li>
+                        <Link
+                          to={a.link}
+                          className="hover:underline mx-2 text-xs"
+                        >
+                          {a.label}
+                        </Link>
+                      </li>
+                    </ul>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
       </Container>
       <Container className={classes.afterFooter} size={"xl"}>
-        <span>
+        <span className="text-xs">
           © Copyright TCE-UN 2024. All rights reserved. <br />
           Designed by Muntech Technologies
         </span>

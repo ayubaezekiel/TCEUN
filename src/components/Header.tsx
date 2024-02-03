@@ -81,14 +81,13 @@ export function Header() {
     }
 
     return (
-      <a
+      <Link
         key={link.label}
-        href={link.link}
+        to={link.link}
         className={`${classes.link} font-bold`}
-        onClick={(event) => event.preventDefault()}
       >
         {link.label}
-      </a>
+      </Link>
     );
   });
 

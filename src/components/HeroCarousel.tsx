@@ -5,6 +5,7 @@ import img1 from "../assets/images/slide-1.jpg";
 import img2 from "../assets/images/slide-2.jpg";
 import img3 from "../assets/images/slide-3.jpg";
 import img4 from "../assets/images/slide-4.jpg";
+import { Link } from "react-router-dom";
 
 const images = [img1, img2, img3, img4];
 
@@ -22,8 +23,9 @@ export function HeroCarousel() {
               Institute of Urology and Nephrology, Usmanu Danfodio University,
               Sokoto, Nigeria
             </p>
-
-            <Button mt={20}>Read More</Button>
+            <Link to={"about/"}>
+              <Button mt={20}>Read More</Button>
+            </Link>
           </div>
         </Center>
       </BackgroundImage>

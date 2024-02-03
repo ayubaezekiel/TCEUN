@@ -43,7 +43,8 @@ import partner1 from "../assets/images/partner-1.png";
 import partner2 from "../assets/images/partner-2.png";
 import partner3 from "../assets/images/partner-3.jpg";
 import partner4 from "../assets/images/partner-4(1).png";
-import { Image } from "@mantine/core";
+import { Image, em } from "@mantine/core";
+import { useMediaQuery } from "@mantine/hooks";
 
 const IMAGES = [
   gallery0,
@@ -88,15 +89,16 @@ const IMAGES = [
 ];
 const PARTNERS = [partner1, partner2, partner3, partner4];
 export function Gallery() {
+  const isMobile = useMediaQuery(`(max-width: ${em(750)})`);
+
   return (
     <Carousel
-      withIndicators
       height={400}
-      slideSize="33.3333%"
+      slideSize={isMobile ? "100%" : "33.3333%"}
       slideGap="md"
       loop
       align="start"
-      slidesToScroll={4}
+      slidesToScroll={isMobile ? 1 : 3}
       mb={10}
     >
       {IMAGES.map((i) => (
