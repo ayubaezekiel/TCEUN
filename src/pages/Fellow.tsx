@@ -11,8 +11,8 @@ export default function S() {
         title="Post Fellowship Program"
       />
       <section className="inner-page">
-        <div className="container">
-          <h1 className="mt-4">
+        <div className="p-8">
+          <h1 className="">
             ENROLMENT INTO POST FELLOWSHIP PROGRAM IN URETHRAL AND GENITAL
             RECONSTRUCTION
           </h1>
