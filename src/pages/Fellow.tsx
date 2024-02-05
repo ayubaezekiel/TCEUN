@@ -12,21 +12,25 @@ export default function S() {
       />
       <section className="inner-page">
         <div className="p-8">
-          <h1 className="">
+          <h1 className="p-4 font-bold text-center text-3xl ">
             ENROLMENT INTO POST FELLOWSHIP PROGRAM IN URETHRAL AND GENITAL
             RECONSTRUCTION
           </h1>
-          <h2>Training Program, Goals And Objectives</h2>
+          <h2 className="mt-4 text-xl text-blue-900 font-bold">
+            Training Program, Goals And Objectives
+          </h2>
           <p>
             The goal of our Post fellowship programme is to provide subspecialty
-            training in Urethral and Genital Reconstruction. The Post-Fellowship
+            training in Urethral and Genital Reconstruction. The Post-Fellowshi
             Program has been designed to help Fellows refine their surgical
             skills in Urethral and Genital Reconstruction to function as a
             valued member of Genitourinary Reconstructive Societies, globally.
             Fellows will acquire more specialized expertise that complement
             their residency training.
           </p>
-          <p>The objectives are:</p>
+          <p className="mt-4 text-xl text-blue-900 font-bold">
+            The objectives are:
+          </p>
           <ul>
             <li>
               To assist fellows develop competence in surgical techniques of
@@ -47,11 +51,13 @@ export default function S() {
             individuals with disorders of sex development, for which the
             Institute has a grant
           </p>
-          <h2>MODE OF DELIVERY</h2>
+          <h2 className=" mt-4 text-xl text-blue-900 font-bold">
+            MODE OF DELIVERY
+          </h2>
           <ul>
             <li>
               Full and active participate in evaluation of patients and decision
-              making{" "}
+              making
             </li>
             <li>
               Clinical meetings and discussions, conferences, lectures and
@@ -84,7 +90,9 @@ export default function S() {
             </li>
           </ul>
 
-          <h2>POST-FELLOWSHIP FORMAT</h2>
+          <h2 className=" mt-4 text-xl text-blue-900 font-bold">
+            POST-FELLOWSHIP FORMAT
+          </h2>
           <ul>
             <li>Has a duration of 12 consecutive months – starting in July</li>
             <li>Training is full time </li>
@@ -95,7 +103,7 @@ export default function S() {
             </li>
           </ul>
 
-          <h2>EVALUATION</h2>
+          <h2 className=" mt-4 text-xl text-blue-900 font-bold">EVALUATION</h2>
           <p>
             Successful fellows must be fully documented at the Institute and The
             Usmanu Danfodiyo University Teaching Hospital. A log book will be
@@ -111,7 +119,9 @@ export default function S() {
             dully communicated to the primary employer.
           </p>
 
-          <h2>FELLOWSHIP BENEFITS</h2>
+          <h2 className=" mt-4 text-xl text-blue-900 font-bold">
+            FELLOWSHIP BENEFITS
+          </h2>
           <ul>
             <li>free accommodation throughout the training</li>
             <li>Free lunch in Operation Rooms</li>
@@ -122,8 +132,10 @@ export default function S() {
               Reconstructive Surgeons(GURS)
             </li>
           </ul>
-          <h2>APPLICATION PROCESS</h2>
-          <p>
+          <h2 className="mt-4 text-xl text-blue-900 font-bold">
+            APPLICATION PROCESS
+          </h2>
+          <p className="mt-4 text-lg">
             Selection is competitive and open to Urologists who have met the
             following requirements
           </p>
@@ -148,42 +160,39 @@ export default function S() {
             <li>Curriculum Vitae </li>
             <li>
               Two Letters of Recommendation, one of which must be from a Fellow
-              in in Urology{" "}
+              in in Urology
             </li>
             <li>
               Letter of sponsorship for supernumerary post fellowship training
               from primary employer. This is a supernumerary training and
-              prospective fellows most show evidence of employment{" "}
+              prospective fellows most show evidence of employment
             </li>
           </ul>
 
-          <p>
-            {" "}
-            <strong> Note: Only one slot available per year </strong>{" "}
-          </p>
-          <h2>This information must be forwarded via E-Mail to:</h2>
-          <p>
+          <span className="text-red-800 text-xl font-bold">
+            Note: Only one slot available per year{" "}
+          </span>
+          <h2 className=" mt-4 text-xl text-blue-900 font-bold">
+            This information must be forwarded via E-Mail to:
+          </h2>
+          <p className="mt-2">
             Prof Ismaila A Mungadi <br />
             FWACS, FMAS, Cert Endourol, Member GURS
           </p>
 
-          <p>
-            {" "}
+          <p className="mt-2">
             Director, TETFund Centre of Excellence in Urology & Nephrology
             Institute of Urology and Nephrology.Usmanu Danfodiyo University ,
             Sokoto
           </p>
-          <a href="imungadi@yahoo.com"> imungadi@yahoo.com</a>
-          <p>
-            <a href="arzika.ismaila@udusok.ed.ng ">
-              {" "}
-              arzika.ismaila@udusok.ed.ng{" "}
-            </a>
-          </p>
+          <p className="mt-2">Mail: imungadi@yahoo.com</p>
+
+          <p className="mt-2"> MAil2: arzika.ismaila@udusok.ed.ng</p>
+
           <p>copy: tce-un@udusok.edu.ng </p>
 
           <p>
-            <strong>
+            <strong className=" text-red-900">
               Closing Date: 30th March,2023
               <br />
               Training commencement date 1st July, 2023
