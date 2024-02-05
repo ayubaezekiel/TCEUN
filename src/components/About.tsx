@@ -60,7 +60,7 @@ export function About() {
               </div>
             </div>
             <div className="mt-8 hover:text-cyan-600 text-xl text-gray-600">
-              <Link to={""}>Read More</Link>
+              <Link to={"/about"}>Read More</Link>
             </div>
           </div>
         </div>

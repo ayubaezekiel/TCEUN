@@ -2,14 +2,18 @@ import { Container } from "@mantine/core";
 import about from "../assets/images/about.jpg";
 import features from "../assets/images/features.jpg";
 import { IconCircleCheck } from "@tabler/icons-react";
+import { PageBreadcrumbs } from "../components/Breadcrumbs";
 
 export default function AboutPage() {
   return (
     <div>
-      <div className=" grid grid-cols-2 p-2 bg-cyan-100 ">
-        <h1 className="text-lg font-bold">About Us</h1>
-        <h1 className=" text-right text-lg">Home / About Us</h1>
-      </div>
+      <PageBreadcrumbs
+        currentUrl={[
+          { href: "/", title: "Home" },
+          { href: "/news/", title: "About Us" },
+        ]}
+        title="About Us"
+      />
       <div className="p-4 grid md:grid-cols-2 gap-4 my-10">
         <div className="p-4 group hover:bg-cyan-700 shadow-cyan-700 hover:text-white rounded-md shadow-[0px_5px_20px_0px]">
           <div className="my-4 flex items-center gap-2">

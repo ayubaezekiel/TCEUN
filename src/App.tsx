@@ -8,9 +8,9 @@ import OurServices from "./pages/Services";
 import FellowShip from "./pages/Fellow";
 import NewsPage from "./pages/News";
 import PublicationPage from "./pages/Publication";
-
 import { Footer } from "./components/Footer";
 import ContactUs from "./pages/Contact";
+import GalleryPage from "./pages/Gallerys";
 
 function App() {
   return (
@@ -25,6 +25,7 @@ function App() {
         <Route element={<ContactUs />} path="contact/" />
         <Route element={<NewsPage />} path="news/" />
         <Route element={<PublicationPage />} path="publication/" />
+        <Route element={<GalleryPage />} path="gallerys/" />
       </Routes>
 
       <Footer />

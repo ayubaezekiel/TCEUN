@@ -20,14 +20,18 @@ import sadiq from "../assets/images/sadiq.png";
 import sani from "../assets/images/sani.jpg";
 
 import zarau from "../assets/images/Zarau.jpg";
+import { PageBreadcrumbs } from "../components/Breadcrumbs";
 
 export default function OurTeam() {
   return (
     <div>
-      <div className=" grid grid-cols-2 p-2 bg-cyan-100 ">
-        <h1 className="text-lg font-bold">Our Team</h1>
-        <h1 className=" text-right text-lg">Home / Our Team</h1>
-      </div>
+      <PageBreadcrumbs
+        currentUrl={[
+          { href: "/", title: "Home" },
+          { href: "/news/", title: "Team" },
+        ]}
+        title="Our Team"
+      />
       <Container size={"xl"}>
         <div className="flex justify-center flex-col my-24">
           <h1 className="uppercase text-4xl border-cyan-600 inline-flex font-bold justify-center text-gray-700">

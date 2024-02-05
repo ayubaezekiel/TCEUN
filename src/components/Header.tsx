@@ -39,7 +39,7 @@ const links = [
     links: [
       { link: "/archive", label: "Archive" },
       { link: "/publication", label: "Publications" },
-      { link: "/gallery", label: "Gallery" },
+      { link: "/gallerys", label: "Gallery" },
       { link: "/donate", label: "Donate" },
     ],
   },

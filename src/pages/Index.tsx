@@ -267,12 +267,7 @@ export default function Index() {
             BOARD OF DIRECTORS
           </h1>
           <span className="border-b-4 border-cyan-600 w-14 mx-auto my-4"></span>
-          <p className="text-center text-gray-700 font-normal text-xl">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
-            voluptatum id, ex inventore ad deserunt, minima quidem, dolor
-            impedit dicta harum quisquam quae ipsa enim voluptate officiis
-            dolore facilis nesciunt.
-          </p>
+          <p className="text-center text-gray-700 font-normal text-xl"></p>
         </div>
 
         <div className="flex flex-col md:flex-row gap-4 mx-auto md:w-[50%]">
@@ -375,7 +370,7 @@ export default function Index() {
           />
         </div>
         <div className="my-4 hover:text-cyan-700">
-          <Link to={""} className="text-2xl font-bold text-gray-600  ">
+          <Link to={"/team"} className="text-2xl font-bold text-gray-600  ">
             View More...
           </Link>
         </div>
@@ -451,7 +446,7 @@ export default function Index() {
           />
         </div>
         <div className="my-4 hover:text-cyan-700">
-          <Link to={""} className="text-2xl font-bold text-gray-600 ">
+          <Link to={"/team"} className="text-2xl font-bold text-gray-600 ">
             View More...
           </Link>
         </div>

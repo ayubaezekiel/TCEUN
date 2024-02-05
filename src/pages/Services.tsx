@@ -1,13 +1,17 @@
 import { Container } from "@mantine/core";
 import Services from "../components/Services";
+import { PageBreadcrumbs } from "../components/Breadcrumbs";
 
 export default function OurServices() {
   return (
     <div>
-      <div className=" grid grid-cols-2 p-2 bg-cyan-100 ">
-        <h1 className="text-lg font-bold">Our Services</h1>
-        <h1 className=" text-right text-lg">Home / Our Services</h1>
-      </div>
+      <PageBreadcrumbs
+        currentUrl={[
+          { href: "/", title: "Home" },
+          { href: "/news/", title: "Services" },
+        ]}
+        title="Our Services"
+      />
       <div className="p-4 flex flex-col md:flex-row gap-4 my-10">
         <div className="p-4 group hover:bg-cyan-700 shadow-cyan-700 hover:text-white rounded-md shadow-[0px_5px_20px_0px]">
           <div className="my-4 flex items-center gap-2">

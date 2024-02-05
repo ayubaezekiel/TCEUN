@@ -36,7 +36,6 @@ import gallery18 from "../assets/images/gallery-26.jpg";
 import gallery78 from "../assets/images/gallery-27.jpg";
 import gallery79 from "../assets/images/gallery-28.jpg";
 import gallery19 from "../assets/images/gallery-29.jpg";
-import gallery81 from "../assets/images/gallery-29.jpg";
 import gallery76 from "../assets/images/gallery-30.jpg";
 import gallery74 from "../assets/images/gallery-31.jpg";
 import gallery21 from "../assets/images/gallery-32.jpg";
@@ -45,8 +44,7 @@ import gallery23 from "../assets/images/gallery-34.jpg";
 import gallery24 from "../assets/images/gallery-35.jpg";
 import gallery25 from "../assets/images/gallery-39.jpg";
 import gallery26 from "../assets/images/gallery-40.jpg";
-import gallery27 from "../assets/images/gallery22.jpg";
-import gallery28 from "../assets/images/gallery22.jpg";
+
 import partner1 from "../assets/images/partner-1.png";
 import partner2 from "../assets/images/partner-2.png";
 import partner3 from "../assets/images/partner-3.jpg";
@@ -56,18 +54,18 @@ import { useMediaQuery } from "@mantine/hooks";
 
 const IMAGES = [
   c1,
-  c2,
-  g1,
-  g2,
-  g3,
   g4,
   g6,
+  g3,
+  g1,
+  g2,
   g7,
+  c2,
+
   g8,
   gallery0,
   gallery23,
   gallery24,
-  gallery81,
   gallery25,
   gallery1,
   gallery2,
@@ -90,8 +88,7 @@ const IMAGES = [
   gallery87,
   gallery88,
   gallery12,
-  gallery27,
-  gallery28,
+
   gallery16,
   gallery18,
   gallery17,

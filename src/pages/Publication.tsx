@@ -1,4 +1,5 @@
 import { Paper, Table } from "@mantine/core";
+import { PageBreadcrumbs } from "../components/Breadcrumbs";
 
 const elements = [
   {
@@ -305,10 +306,13 @@ function PubTable() {
 export default function PublicationPage() {
   return (
     <div>
-      <div className=" grid grid-cols-2 p-2 bg-cyan-100 ">
-        <h1 className="text-lg font-bold">Publications</h1>
-        <h1 className=" text-right text-lg">Home / Publications</h1>
-      </div>
+      <PageBreadcrumbs
+        currentUrl={[
+          { href: "/", title: "Home" },
+          { href: "/news/", title: "Publications" },
+        ]}
+        title="Publications"
+      />
       <div className="flex justify-center flex-col my-24">
         <h1 className="uppercase text-4xl border-cyan-600 inline-flex font-bold justify-center text-gray-700">
           Recent Publications
