@@ -1,6 +1,6 @@
 import { Container } from "@mantine/core";
 
-import { Cable, MailPlus, MapPin, Phone } from "lucide-react";
+import { MailPlus, MapPin, Phone } from "lucide-react";
 import { ContactUsForm } from "../components/forms/ContactUsForm";
 import { PageBreadcrumbs } from "../components/Breadcrumbs";
 
@@ -54,22 +54,17 @@ export default function ContactUs() {
 const info = [
   {
     title: "Our Address",
-    desc: "Plot 1756 Cadastral zone E27 Apo, Abuja",
+    desc: "No. 1 Garba Nadama Rd, Sokoto 840232, Nigeria",
     icon: MapPin,
   },
   {
     title: "Call Us",
-    desc: "+2327049225550",
+    desc: "+2347061567228",
     icon: Phone,
   },
   {
     title: "Email Us",
-    desc: "info@sahadhospitals.com",
+    desc: "tce-un@udusok.edu.ng",
     icon: MailPlus,
-  },
-  {
-    title: "Customer Support",
-    desc: "info@sahadhospitals.com",
-    icon: Cable,
   },
 ];
