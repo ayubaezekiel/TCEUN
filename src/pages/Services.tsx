@@ -71,6 +71,12 @@ export default function OurServices() {
               <li>
                 Ultrasound Guided Transrectal Prostate Biopsy and Kidney Biopsy
               </li>
+              <li className="p-2 font-extrabold text-green-800 text-2xl">
+                New
+              </li>
+              <li>Kidney Transplant</li>
+              <li>Plasmapheresis</li>
+
               <li className="p-2">
                 Many other general and specialized urological and
                 uro-gynaecological procedures

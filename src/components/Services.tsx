@@ -28,9 +28,11 @@ export default function Services() {
             <span className="border-b-4 border-cyan-600 w-14 mx-auto my-2"></span>
 
             <p>
-              Workshops and short courses, Residency training(NWPGC),Pre part
-              one training for Surgeons, Gynaecologist and
-              physicians(Nephrology)...
+              PhD. Urology, PhD. Urology Nursing, MSc. Urology Nursing,
+              Postgraduate Diploma in Urology, Post Fellowship in Genital
+              Urinary Reconstruction, Workshops and short courses, Residency
+              training(NWPGC),Pre part one training for Surgeons, Gynaecologist
+              and physicians(Nephrology)...
             </p>
           </div>
           <div className="flex flex-col gap-4 text-center justify-center items-center">
@@ -56,9 +58,9 @@ export default function Services() {
             <span className="border-b-4 border-cyan-600 w-14 mx-auto my-2"></span>
 
             <p>
-              General Nephrology, Haemodialysis, Transplant evaluation for
-              recipient and donor,Interdepartmental consultation,Out patient
-              clinic runs on Tuesday...
+              Plasmapherisis, General Nephrology, Haemodialysis, Transplant
+              evaluation for recipient and donor,Interdepartmental
+              consultation,Out patient clinic runs on Tuesday...
             </p>
           </div>
           <div className="flex flex-col gap-4 text-center justify-center items-center">
@@ -69,9 +71,10 @@ export default function Services() {
             <span className="border-b-4 border-cyan-600 w-14 mx-auto my-2"></span>
 
             <p>
-              Vesicovaginal Fistula and Rectovaginal Fistula repair, Cystocele,
-              rectocele,Female urethral reconstruction, Sphincters plasty,
-              Pelvic floor repair/ perrineorrhaphy, Vaginoplasty...
+              Kidney transplant, Vesicovaginal Fistula and Rectovaginal Fistula
+              repair, Cystocele, rectocele,Female urethral reconstruction,
+              Sphincters plasty, Pelvic floor repair/ perrineorrhaphy,
+              Vaginoplasty...
             </p>
           </div>
           <div className="flex flex-col gap-4 text-center justify-center items-center">
@@ -79,7 +82,9 @@ export default function Services() {
             <span className="text-2xl font-bold">Research</span>
             <span className="border-b-4 border-cyan-600 w-14 mx-auto my-2"></span>
 
-            <p>Coming Soon...</p>
+            <p>
+              Urology, Nephrology, Intersex, Urology Data Base, Uro-gynaecology
+            </p>
           </div>
         </div>
       </Container>

@@ -24,10 +24,11 @@ const links = [
     link: "#1",
     label: "TRAINING",
     links: [
-      { link: "/docs", label: "Post Fellowship" },
-      { link: "/", label: "Comming soon" },
-      { link: "/", label: "Comming soon" },
-      { link: "/", label: "Comming soon" },
+      { link: "/fellow", label: "Post Fellowship" },
+      { link: "https://www.pg.udusok.edu.ng", label: "PhD. Urology" },
+      { link: "https://www.pg.udusok.edu.ng/", label: "PhD. Urology Nursing" },
+      { link: "https://pg.udusok.edu.ng/", label: "MSc. Urology Nursing" },
+      { link: "https://pg.udusok.edu.ng/", label: "PGD Urology" },
     ],
   },
   { link: "/news", label: "NEWS/EVENT" },
@@ -37,7 +38,7 @@ const links = [
     label: "EXTRAS",
     links: [
       { link: "/archive", label: "Archive" },
-      { link: "/publications", label: "Publications" },
+      { link: "/publication", label: "Publications" },
       { link: "/gallery", label: "Gallery" },
       { link: "/donate", label: "Donate" },
     ],
@@ -51,7 +52,7 @@ export function Header() {
   const items = links.map((link) => {
     const menuItems = link.links?.map((item) => (
       <Menu.Item key={item.link} className="hover:text-cyan-700">
-        {item.label}
+        <Link to={item.link}>{item.label}</Link>
       </Menu.Item>
     ));
 

@@ -24,7 +24,6 @@ import features from "../assets/images/features.jpg";
 import Services from "../components/Services";
 import ContactForm from "../components/Contact";
 import { ReactNode } from "react";
-
 import VC from "../assets/images/VC.jpg";
 import CMD from "../assets/images/CMD.jpg";
 import director from "../assets/images/director.jpg";
@@ -43,7 +42,7 @@ export default function Index() {
     <div>
       <Hero />
 
-      <div className="p-4 flex flex-col md:flex-row gap-4 my-10">
+      <div className="p-4 grid md:grid-cols-2 gap-4 my-10">
         <div className="p-4 group hover:bg-cyan-700 shadow-cyan-700 hover:text-white rounded-md shadow-[0px_5px_20px_0px]">
           <div className="my-4 flex items-center gap-2">
             <IconEyeBolt className="text-cyan-700 group-hover:text-white h-24 w-14" />

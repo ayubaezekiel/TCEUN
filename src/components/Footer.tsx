@@ -34,7 +34,7 @@ const data = [
 
 export function Footer() {
   return (
-    <footer className="pt-4 bg-gray-100">
+    <footer className="pt-4 bg-gray-100 mt-10">
       <Container className={classes.inner} size={"xl"}>
         <div className="flex flex-col gap-2 text-xs">
           <Image src={logo} h={100} w={200} className="my-4" />

@@ -1,4 +1,13 @@
 import { Carousel } from "@mantine/carousel";
+import c1 from "../assets/images/c1.jpg";
+import c2 from "../assets/images/c2.png";
+import g1 from "../assets/images/g1.jpg";
+import g2 from "../assets/images/g2.jpg";
+import g3 from "../assets/images/g3.jpg";
+import g4 from "../assets/images/g4.jpg";
+import g6 from "../assets/images/g6.jpg";
+import g7 from "../assets/images/g7.jpg";
+import g8 from "../assets/images/g8.jpg";
 import gallery0 from "../assets/images/gallery-1.jpg";
 import gallery1 from "../assets/images/gallery-2.jpg";
 import gallery2 from "../assets/images/gallery-3.jpg";
@@ -6,7 +15,6 @@ import gallery3 from "../assets/images/gallery-4.jpg";
 import gallery4 from "../assets/images/gallery-5.jpg";
 import gallery5 from "../assets/images/gallery-6.jpg";
 import gallery6 from "../assets/images/gallery-7.jpg";
-import gallery81 from "../assets/images/gallery-8.jpg";
 import gallery82 from "../assets/images/gallery-9.jpg";
 import gallery83 from "../assets/images/gallery-10.jpg";
 import gallery85 from "../assets/images/gallery-11.jpg";
@@ -28,7 +36,7 @@ import gallery18 from "../assets/images/gallery-26.jpg";
 import gallery78 from "../assets/images/gallery-27.jpg";
 import gallery79 from "../assets/images/gallery-28.jpg";
 import gallery19 from "../assets/images/gallery-29.jpg";
-
+import gallery81 from "../assets/images/gallery-29.jpg";
 import gallery76 from "../assets/images/gallery-30.jpg";
 import gallery74 from "../assets/images/gallery-31.jpg";
 import gallery21 from "../assets/images/gallery-32.jpg";
@@ -47,6 +55,15 @@ import { Image, em } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
 
 const IMAGES = [
+  c1,
+  c2,
+  g1,
+  g2,
+  g3,
+  g4,
+  g6,
+  g7,
+  g8,
   gallery0,
   gallery23,
   gallery24,

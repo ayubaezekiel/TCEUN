@@ -8,7 +8,6 @@ export function Hero() {
         <HeroCarousel />
       </div>
       <div className="bg-cyan-500 p-4">
-        <Badge>Date</Badge>
         <div className="text-white">
           <h1 className="font-bold rounded-md mt-4 text-xl bg-black inline-flex p-2">
             Anouncement
@@ -20,6 +19,10 @@ export function Hero() {
             of patients for kidney transplant. if you require this service,
             Please contact 08188024060
           </p>
+          <Badge>June 2024</Badge>
+          <h1 className="font-bold mt-4 text-red-600">
+            Genito-urinary Reconstructions
+          </h1>
         </div>
       </div>
     </div>

@@ -18,7 +18,7 @@ import khalid from "../assets/images/My Passport 20-01-2021.jpg";
 import imam from "../assets/images/Imam.jpg";
 import sadiq from "../assets/images/sadiq.png";
 import sani from "../assets/images/sani.jpg";
-import logo from "../assets/images/logo.png";
+
 import zarau from "../assets/images/Zarau.jpg";
 
 export default function OurTeam() {
@@ -101,48 +101,6 @@ export default function OurTeam() {
             image={zarau}
             name="Hajiya Zara'u Umar"
             title="Finance Officer"
-            note="BSc"
-            Socials={
-              <div className="flex gap-6 mt-2 ">
-                <IconBrandFacebook size={30} />
-                <IconBrandTwitter size={30} />
-                <IconBrandLinkedin size={30} />
-              </div>
-            }
-          />
-          <StaffCard
-            notVc
-            image={logo}
-            name="Coming Soon"
-            title="Deputy Director Research"
-            note="BSc"
-            Socials={
-              <div className="flex gap-6 mt-2 ">
-                <IconBrandFacebook size={30} />
-                <IconBrandTwitter size={30} />
-                <IconBrandLinkedin size={30} />
-              </div>
-            }
-          />
-          <StaffCard
-            notVc
-            image={logo}
-            name="Coming Soon"
-            title="Deputy Director Training"
-            note="BSc"
-            Socials={
-              <div className="flex gap-6 mt-2 ">
-                <IconBrandFacebook size={30} />
-                <IconBrandTwitter size={30} />
-                <IconBrandLinkedin size={30} />
-              </div>
-            }
-          />
-          <StaffCard
-            notVc
-            image={logo}
-            name="Malam Ibrahim Lawal"
-            title="Deputy Director Clinical Services"
             note="BSc"
             Socials={
               <div className="flex gap-6 mt-2 ">

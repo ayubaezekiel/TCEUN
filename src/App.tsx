@@ -5,6 +5,10 @@ import { Header } from "./components/Header";
 import AboutPage from "./pages/About";
 import OurTeam from "./pages/Team";
 import OurServices from "./pages/Services";
+import FellowShip from "./pages/Fellow";
+import NewsPage from "./pages/News";
+import PublicationPage from "./pages/Publication";
+
 import { Footer } from "./components/Footer";
 import ContactUs from "./pages/Contact";
 
@@ -16,8 +20,11 @@ function App() {
         <Route element={<Index />} path="/" />
         <Route element={<AboutPage />} path="about/" />
         <Route element={<OurTeam />} path="team/" />
+        <Route element={<FellowShip />} path="fellow/" />
         <Route element={<OurServices />} path="services/" />
         <Route element={<ContactUs />} path="contact/" />
+        <Route element={<NewsPage />} path="news/" />
+        <Route element={<PublicationPage />} path="publication/" />
       </Routes>
 
       <Footer />

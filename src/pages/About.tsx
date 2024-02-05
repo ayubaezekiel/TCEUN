@@ -10,7 +10,7 @@ export default function AboutPage() {
         <h1 className="text-lg font-bold">About Us</h1>
         <h1 className=" text-right text-lg">Home / About Us</h1>
       </div>
-      <div className="p-4 flex flex-col md:flex-row gap-4 my-10">
+      <div className="p-4 grid md:grid-cols-2 gap-4 my-10">
         <div className="p-4 group hover:bg-cyan-700 shadow-cyan-700 hover:text-white rounded-md shadow-[0px_5px_20px_0px]">
           <div className="my-4 flex items-center gap-2">
             <span className="text-2xl font-bold">Vision</span>
@@ -106,6 +106,11 @@ export default function AboutPage() {
               <li>
                 Ultrasound Guided Transrectal Prostate Biopsy and Kidney Biopsy
               </li>
+              <li className="p-2 font-extrabold text-green-800 text-2xl">
+                New
+              </li>
+              <li>Kidney Transplant</li>
+              <li>Plasmapheresis</li>
               <li className="p-2">
                 Many other general and specialized urological and
                 uro-gynaecological procedures

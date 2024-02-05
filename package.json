@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@hookform/resolvers": "^3.3.4",
     "@mantine/carousel": "^7.3.0",
     "@mantine/core": "^7.3.0",
     "@mantine/form": "^7.3.0",
@@ -17,11 +18,14 @@
     "@tabler/icons-react": "^2.42.0",
     "embla-carousel-react": "8.0.0-rc15",
     "google-maps-react": "^2.0.6",
+    "lucide-react": "^0.321.0",
     "postcss-preset-mantine": "^1.11.1",
     "postcss-simple-vars": "^7.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.20.1"
+    "react-hook-form": "^7.50.0",
+    "react-router-dom": "^6.20.1",
+    "zod": "^3.22.4"
   },
   "devDependencies": {
     "@types/react": "^18.2.37",
