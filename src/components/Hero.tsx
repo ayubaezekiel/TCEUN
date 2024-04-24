@@ -12,16 +12,18 @@ export function Hero() {
           <h1 className="font-bold rounded-md mt-4 text-xl bg-black inline-flex p-2">
             Anouncement
           </h1>
-          <h1 className="font-bold mt-4">Kidney Transplant</h1>
+          <h1 className="font-bold mt-4">
+            Sokoto Alberta Monthly Kidney Transplant Seminar Series
+          </h1>
           <p>
-            The TETFund Centre of Excellence in Urology and Nephrology, Usmanu
-            Danfodiyo Univeristy & Teaching Hospital has commenced recruitment
-            of patients for kidney transplant. if you require this service,
-            Please contact 08188024060
+            Towards Establishing a viable kidney transplant program,
+            Distinguished Speaker: Philip F Halloran, MD, PhD, OC, FRSC
           </p>
-          <Badge>June 2024</Badge>
+          <Badge>April 25th 2024</Badge>
           <h1 className="font-bold mt-4 text-red-600">
-            Genito-urinary Reconstructions
+            Time:5pm West African Standard Time(10:00MDT) Physical venue: IUN
+            Conference Hall, UDUTH Sokoto Meeting ID: 83401470153 Passcode:
+            527662
           </h1>
         </div>
       </div>
