@@ -14,7 +14,7 @@ export default function Services() {
         <h1 className="uppercase text-4xl border-cyan-600 inline-flex font-bold justify-center text-gray-700">
           Services
         </h1>
-        <span className="border-b-4 border-cyan-600 w-14 mx-auto my-4"></span>
+        <span className="border-b-4 border-cyan-600 w-14 mx-auto my-4" />
         <p className="text-center text-gray-700 font-normal text-xl">
           Explore a range of high quality urology/nephrology healthcare
           solutions, training and research.

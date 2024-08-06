@@ -123,23 +123,13 @@ export function Gallery() {
     </Carousel>
   );
 }
+
 export function Partners() {
   return (
-    <Carousel
-      withIndicators
-      height={200}
-      slideSize="25%"
-      slideGap="md"
-      loop
-      align="start"
-      slidesToScroll={4}
-      mb={10}
-    >
-      {PARTNERS.map((i) => (
-        <Carousel.Slide>
-          <Image h={120} w={400} src={i} />
-        </Carousel.Slide>
+    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 justify-between my-4">
+      {PARTNERS.map((p) => (
+        <img key={p} src={p} />
       ))}
-    </Carousel>
+    </div>
   );
 }

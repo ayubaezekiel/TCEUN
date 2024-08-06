@@ -1,19 +1,18 @@
 import {
-  Menu,
-  Group,
-  Center,
   Burger,
-  Container,
-  Image,
   Button,
-  em,
+  Center,
+  Container,
+  Group,
+  Image,
+  Menu,
 } from "@mantine/core";
-import { useDisclosure } from "@mantine/hooks";
+import { useDisclosure, useMediaQuery } from "@mantine/hooks";
+import { IconButton } from "@radix-ui/themes";
 import { IconChevronDown, IconClock, IconPhone } from "@tabler/icons-react";
+import { Link } from "react-router-dom";
 import classes from "../assets/css/HeaderMenu.module.css";
 import logo from "../assets/images/logo.png";
-import { Link } from "react-router-dom";
-import { useMediaQuery } from "@mantine/hooks";
 
 const links = [
   { link: "/", label: "HOME" },
@@ -47,7 +46,7 @@ const links = [
 
 export function Header() {
   const [opened, { toggle }] = useDisclosure(false);
-  const isMobile = useMediaQuery(`(max-width: ${em(750)})`);
+  const matches = useMediaQuery("(min-width: 56.25em)");
 
   const items = links.map((link) => {
     const menuItems = link.links?.map((item) => (
@@ -94,22 +93,32 @@ export function Header() {
 
   return (
     <header>
-      <div className="p-4 bg-cyan-600 flex justify-around gap-2 items-center">
-        <span className="flex gap-2 text-white">
-          <IconClock /> Monday - Friday, 8AM to 5PM
-        </span>
+      <div className="p-4 bg-cyan-600 flex justify-between gap-2 items-center">
+        <div className="flex gap-2 text-white items-center">
+          <IconButton radius="full" color="gray">
+            <IconClock />
+          </IconButton>
+          <span className="text-xs md:text-lg">
+            Monday - Friday, 8AM to 5PM
+          </span>
+        </div>
         <Link to={"https://www.udusok.edu.ng"} className="text-red-700">
-          <Button
-            size={isMobile ? "sm" : "lg"}
-            variant="gradient"
-            gradient={{ from: "cyan", to: "red" }}
-          >
-            Visit the University
-          </Button>
+          {matches && (
+            <Button
+              size={"lg"}
+              variant="gradient"
+              gradient={{ from: "cyan", to: "red" }}
+            >
+              Visit the University
+            </Button>
+          )}
         </Link>
-        <span className="flex gap-2 text-white">
-          <IconPhone /> Call us now +2347061567228
-        </span>
+        <div className="flex items-center text-white gap-2">
+          <IconButton radius="full" color="gray">
+            <IconPhone />
+          </IconButton>
+          <span className="text-xs md:text-lg">Call us now +2347061567228</span>
+        </div>
       </div>
       <nav className={`${classes.header} p-4`}>
         <Container size="xl">

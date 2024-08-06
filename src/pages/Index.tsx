@@ -16,7 +16,7 @@ import {
   IconTransfer,
   IconUser,
 } from "@tabler/icons-react";
-import { Button, Card, Container, Image } from "@mantine/core";
+import { Button, Container, Image } from "@mantine/core";
 import { About } from "../components/About";
 import { Hero } from "../components/Hero";
 import { Link } from "react-router-dom";
@@ -36,16 +36,17 @@ import agwu from "../assets/images/agwu.jpg";
 import khalid from "../assets/images/My Passport 20-01-2021.jpg";
 import { Gallery, Partners } from "../components/Galery";
 import Faq from "../components/Faq";
+import { Card } from "@radix-ui/themes";
 
 export default function Index() {
   return (
     <div>
       <Hero />
 
-      <div className="p-4 grid md:grid-cols-2 gap-4 my-10">
-        <div className="p-4 group hover:bg-cyan-700 shadow-cyan-700 hover:text-white rounded-md shadow-[0px_5px_20px_0px]">
+      <div className="container mx-auto p-4 grid md:grid-cols-2 gap-4 my-10">
+        <Card className="p-4 group hover:bg-cyan-700   rounded-md shadow-[0px_5px_20px_0px]">
           <div className="my-4 flex items-center gap-2">
-            <IconEyeBolt className="text-cyan-700 group-hover:text-white h-24 w-14" />
+            <IconEyeBolt className="text-cyan-700 h-24 w-14" />
             <span className="text-3xl font-bold">Vision</span>
           </div>
           <article>
@@ -53,10 +54,10 @@ export default function Index() {
             research, invention, manpower development and state of the art
             treatment of commmon Urologic, Uro-gynaecologic and kidney disorders
           </article>
-        </div>
-        <div className="p-4 group hover:bg-cyan-700 shadow-cyan-700 hover:text-white rounded-md shadow-[0px_5px_20px_0px]">
+        </Card>
+        <Card className="p-4 group hover:bg-cyan-700  rounded-md shadow-[0px_5px_20px_0px]">
           <div className="my-4 flex items-center gap-2">
-            <IconDna2 className="text-cyan-700 group-hover:text-white h-24 w-14" />
+            <IconDna2 className="text-cyan-700 h-24 w-14" />
             <span className="text-3xl font-bold">Mission</span>
           </div>
           <article>
@@ -65,18 +66,19 @@ export default function Index() {
             services of international standard to the teeming population of
             Urology, Urogynaecology and kidney disorder patients and clientele
           </article>
-        </div>
+        </Card>
       </div>
 
       <div className="p-4 bg-cyan-600 mt-10">
         <h1 className="text-3xl font-bold text-center mt-4">
-          In an emergency? Need help now?
+          In An Emergency? <br />
+          <span className="text-xs"> Need help now?</span>
         </h1>
         <p className="my-4 text-xl text-center text-white">
           You may need to contact us to determine if a procedure is not being
           temporarily affected by reorganization and upgrade renovation.
         </p>
-        <div className="flex justify-end">
+        <div className="flex justify-center">
           <Button
             mt={10}
             variant="outline"
@@ -166,14 +168,12 @@ export default function Index() {
           <h1 className="text-4xl text-gray-600 text-center uppercase font-bold">
             Surgeries we offer
           </h1>
-          <div className="border-b-4 border-cyan-600 w-14 mx-auto my-4"></div>
+          <div className="border-b-4 border-cyan-600 w-14 mx-auto my-4" />
         </div>
         <div className="grid gap-4 md:grid-cols-2">
           <div className="flex flex-col gap-10">
             <div className="flex items-center">
-              <span>
-                <IconTransfer className="w-16 h-16 text-cyan-600" />
-              </span>
+              <IconTransfer className="w-16 h-16 text-cyan-600" />
               <div>
                 <p className="text-gray-700 font-bold text-2xl">
                   Kidney Transplant
@@ -185,9 +185,7 @@ export default function Index() {
               </div>
             </div>
             <div className="flex items-center">
-              <span>
-                <Icon3dCubeSphere className="w-16 h-16 text-cyan-600" />
-              </span>
+              <Icon3dCubeSphere className="w-16 h-16 text-cyan-600" />
               <div>
                 <p className="text-gray-700 font-bold text-2xl">
                   Percutaneous Nephrolithotomy
@@ -199,9 +197,7 @@ export default function Index() {
               </div>
             </div>
             <div className="flex items-center">
-              <span>
-                <IconFlask2Filled className="w-16 h-16 text-cyan-600" />
-              </span>
+              <IconFlask2Filled className="w-16 h-16 text-cyan-600" />
               <div>
                 <p className="text-gray-700 font-bold text-2xl">
                   Retrograde Ureteric And Intrarenal Surgery using Laser
@@ -213,9 +209,7 @@ export default function Index() {
               </div>
             </div>
             <div className="flex items-center">
-              <span>
-                <IconDeviceHeartMonitor className="w-16 h-16 text-cyan-600" />
-              </span>
+              <IconDeviceHeartMonitor className="w-16 h-16 text-cyan-600" />
               <div>
                 <p className="text-gray-700 font-bold text-2xl">
                   Endourethral surgery
@@ -227,9 +221,7 @@ export default function Index() {
               </div>
             </div>
             <div className="flex items-center">
-              <span>
-                <IconMicroscope className="w-16 h-16 text-cyan-600" />
-              </span>
+              <IconMicroscope className="w-16 h-16 text-cyan-600" />
               <div>
                 <p className="text-gray-700 font-bold text-2xl">
                   Laparoscopic Surgery
@@ -240,9 +232,7 @@ export default function Index() {
               </div>
             </div>
             <div className="flex items-center">
-              <span>
-                <IconHexagons className="w-16 h-16 text-cyan-600" />
-              </span>
+              <IconHexagons className="w-16 h-16 text-cyan-600" />
               <div>
                 <p className="text-gray-700 font-bold text-2xl">
                   Repair of Congenital Anomalies
@@ -464,7 +454,7 @@ export default function Index() {
         <Gallery />
       </Container>
       <Container size={"xl"}>
-        <div className="flex justify-center flex-col my-24">
+        <div className="flex justify-center flex-col my-10">
           <h1 className="uppercase text-4xl border-cyan-600 inline-flex font-bold justify-center text-gray-700">
             OUR PARTNERS
           </h1>
@@ -472,7 +462,7 @@ export default function Index() {
         </div>
         <Partners />
       </Container>
-      <div className="py-8 px-4 bg-cyan-500/10">
+      <div className="py-8 px-4 bg-cyan-500/10 mt-10">
         <Faq />
       </div>
     </div>
@@ -499,11 +489,10 @@ export function StaffCard({
 }: CardProps) {
   return (
     <Card
-      bg={"cyan.2"}
-      styles={{
-        root: {
-          borderRadius: "0px 30px 30px 0px",
-        },
+      style={{
+        background: "var(--accent-3)",
+        borderRadius: "0px 30px 30px 0px",
+        boxShadow: "0px 5px 10px 2px",
       }}
     >
       <Image src={image} radius={"0px 30px 30px 0px"} />
