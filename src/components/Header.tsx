@@ -7,8 +7,8 @@ import {
   Image,
   Menu,
 } from "@mantine/core";
-import { useDisclosure, useMediaQuery } from "@mantine/hooks";
-import { IconButton } from "@radix-ui/themes";
+import { useMediaQuery } from "@mantine/hooks";
+import { IconButton, Popover } from "@radix-ui/themes";
 import { IconChevronDown, IconClock, IconPhone } from "@tabler/icons-react";
 import { Link } from "react-router-dom";
 import classes from "../assets/css/HeaderMenu.module.css";
@@ -45,7 +45,6 @@ const links = [
 ];
 
 export function Header() {
-  const [opened, { toggle }] = useDisclosure(false);
   const matches = useMediaQuery("(min-width: 56.25em)");
 
   const items = links.map((link) => {
@@ -128,12 +127,21 @@ export function Header() {
               {items}
               <Button>Make an Appointment</Button>
             </Group>
-            <Burger
-              opened={opened}
-              onClick={toggle}
-              size="sm"
-              hiddenFrom="sm"
-            />
+
+            <Popover.Root>
+              <Popover.Trigger>
+                <Burger />
+              </Popover.Trigger>
+              <Popover.Content width="500px">
+                <div className="grid grid-cols-2 gap-2">
+                  {links.map((l) => (
+                    <Button key={l.label}>
+                      <Link to={l.link}>{l.label}</Link>
+                    </Button>
+                  ))}
+                </div>
+              </Popover.Content>
+            </Popover.Root>
           </div>
         </Container>
       </nav>
