@@ -13,18 +13,19 @@ export function Hero() {
             Anouncement
           </h1>
           <h1 className="font-bold mt-4">
-            Sokoto Alberta Monthly Kidney Transplant Seminar Series
+          POST GRADUATE DIPLOMA IN UROLOGY NURSING 2024/2025 ADMISSION
           </h1>
           <p>
-            Towards Establishing a viable kidney transplant program,
-            Distinguished Speaker: Philip F Halloran, MD, PhD, OC, FRSC
+          Applications are invited from suitable qualified candidate for admission into post Graduate Diploma in Urology Nursing
           </p>
-          <Badge>April 25th 2024</Badge>
+          <Badge> Reg. Deadline: 31st January, 2025</Badge>
           <h1 className="font-bold mt-4 text-red-600">
-            Time:5pm West African Standard Time(10:00MDT) Physical venue: IUN
-            Conference Hall, UDUTH Sokoto Meeting ID: 83401470153 Passcode:
-            527662
+          Africa's First Professional Urology Nursing Programme
           </h1>
+          <p>Accredited by NMCN for Registration as a Specialist Urology Nurse</p>
+          <h3 className="font-bold mt-4 ">
+        To Apply Visit  <a className="text-blue-600" href="http://www.pg.udusok.edu.ng">www.pg.udusok.edu.ng</a>
+          </h3>
         </div>
       </div>
     </div>
