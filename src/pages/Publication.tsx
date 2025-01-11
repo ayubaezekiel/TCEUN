@@ -291,7 +291,7 @@ const elements = [
   },
   {
     journal:
-      "36.	Scrotal calcinosis cutis an unrelated finding in benign prostatic hyperplasia patient, is treatment sine qua non? A case report. DOI 10.25259/JHSR_29_2023 ",
+      "Scrotal calcinosis cutis an unrelated finding in benign prostatic hyperplasia patient, is treatment sine qua non? A case report. DOI 10.25259/JHSR_29_2023 ",
     authors: [
       {
         name: "Abdullahi Khalid1, Olusegun George Obadele1, Usman Bello2 , Usman Kamba Haruna 1, Abdullah Abdulwahab-Ahmed1 1Department of Surgery, Tetfund Centre of Excellence in Urology and Nephrology, Institute of Urology and Nephrology, 2Morbid Anatomy and Forensic Medicine, College of Health Sciences, Usmanu Danfodio University, Sokoto, Nigeria ",
@@ -300,10 +300,91 @@ const elements = [
   },
   {
     journal:
-      "35.	Postoperative pain following ankle block and unilateral subarachnoid block for foot surgeries: A randomised controlled trial. doi: 10.25259/SAJHS_6_2023 ",
+      "Postoperative pain following ankle block and unilateral subarachnoid block for foot surgeries: A randomised controlled trial. doi: 10.25259/SAJHS_6_2023 ",
     authors: [
       {
         name: "Bashir Garba Aljannare1, Mohammed Bashir Rabi’u2, Alhassan Datti Mohammed3, Abdullahi Khalid4 1Department of Anesthesia and Intensive Care, Usmanu Danfodiyo University Teaching Hospital Sokoto, 2Department of Anesthesia and Intensive Care, Abubakar Tafawa Balewa University Teaching Hospital, Bauchi, 3Anaesthesia and Critical Care, Aminu Kano University Teaching Hospital, Kano, 4Institute of Urology and Nephrology, Usmanu Danfodiyo University and Teaching Hospital, Sokoto.",
+      },
+    ],
+  },
+  {
+    journal:
+      "Hemodynamic Changes Following Regional Anesthesia for Foot Surgeries: A Comparative Study between Ankle Block and Unilateral Subarachnoid Block.www.mkscienceset.com ",
+    authors: [
+      {
+        name: "Bashir Garba Aljannare1* and Khalid Abdullahi2 1Department of Anesthesiology and Intensive Care, Usmanu Danfodiyo University Teaching Hospital Sokoto, Nigeria 2Tetfund Centre of Excellence in Urology and Nephrology, Institute of Urology and Nephrology, Usmanu Danfodiyo University and Teaching Hospital Sokoto, Nigeria",
+      },
+    ],
+  },
+  {
+    journal:
+      "Comparison of serum prostate specific antigen (PSA), soluble E-cadherin (sE-cad), and inosine monophosphate dehydrogenase-2 (IMPDH-2) as aggressive prostate cancer predictors. African Journal of Urology https://doi.org/10.1186/s12301-024-00441-2",
+    authors: [
+      {
+        name: "Ahmed Mohammed Umar1,2* , Ismaila Arzika Mungadi1, Ngwobia Peter Agwu1, Abdullah Abdulwahab Ahmed1, Abubakar Sadiq Muhammad1 and Abdullahi Khalid1  Umar et al",
+      },
+    ],
+  },
+  {
+    journal:
+      "Traumatic penile amputation managed at Usmanu Danfodiyo University Teaching Hospital Sokoto, Nigeria: a case series. https://doi.org/10.1007/s44337-024-00046-2",
+    authors: [
+      {
+        name: "Ahmed Mohammed Umar1,2 · Abubakar Sadiq Muhammad1 · Abdullahi Khalid1 · Augustine Michael1 · Olusegun George Obadele1",
+      },
+    ],
+  },
+  {
+    journal:
+      "Iatrogenic Tube Ileostomy Complicating Blind Percutaneous Cystostomy Managed in Prostate Cancer Patient: A Case Report Downloaded from http://journals.lww.com/jnam. DOI: 10.4103/jnam.jnam_13_23 ",
+    authors: [
+      {
+        name: "Abdullahi Khalid, Ahmed Mohammed Umar, Gamdu Jesini, Abubakar Sadiq Muhammad, Ngwobia Peter Agwu, Abdulwahab-Ahmed Abdullahi Tetfund Centre of Excellence in Urology and Nephrology, Institute of Urology and Nephrology, Usmanu Danfodiyo University and Teaching Hospital, Sokoto, Nigeria ",
+      },
+    ],
+  },
+  {
+    journal:
+      "Assessment of accuracy of clinical blood loss estimation compared to actual blood loss during major surgeries . DOI: 10.25259/IJMS_57_2024",
+    authors: [
+      {
+        name: "Bashir Garba Aljannare1, Abdullahi Khalid2 1Department of Anesthesiology and Intensive Care, Usmanu Danfodiyo University Teaching Hospital Sokoto, 2Department of Surgery, Institute of Urology and Nephrology, Usmanu Danfodiyo University and Teaching Hospital, Sokoto, Nigeria",
+      },
+    ],
+  },
+  {
+    journal:
+      "Intravenous paracetamol-related loss of consciousness at induction of anesthesia: A case report. DOI 10.25259/GJHSR_77_2023 ",
+    authors: [
+      {
+        name: "Abdullahi Khalid1, Bashir Garba Aljannare2 Departments of 1Surgery, Institute of Urology and Nephrology, 2Anesthesia and Intensive Care, Usmanu Danfodiyo University Teaching Hospital, Sokoto, ",
+      },
+    ],
+  },
+  {
+    journal:
+      "Postoperative extraperitoneal bladder injury after metal pelvic osteosynthesis for pelvic injury.https://doi.org/10.20935/AcadMed7389",
+    authors: [
+      {
+        name: "Khalid Abdullahi1,*, Obadele Olusegun George1, Ajiboye Lukman Olalekan2, Abubakar Isiyaku1, Muhammad Abubakar Sadiq1, Aljannare Bashir Garba3, Okezie Chukwuebuka Kingsley2, Agwu Ngwobia Peter1 Academic Editors: Luca Ansaloni",
+      },
+    ],
+  },
+  {
+    journal:
+      "DOI:10.47837/CMJ.2023111.3] SERUM INOSINE MONOPHOSPHATE DEHYDROGENASE-2 AS A PREDICTOR OF AGGRESSIVE PROSTATE CANCER 1 2 2 2 2 ",
+    authors: [
+      {
+        name: "Umar AM, Mungadi IA, Agwu NP, Abdulwahab-Ahmed A, Muhammad AS, Khalid A, Oyibo EU 2 3 1 Division of Urology, Federal Teaching Hospital Gombe, Ashaka Road, Gombe State, Nigeria. 2 Institute of Urology and Nephrology, Usmanu Danfodiyo University and Teaching Hospital, Sokoto State, Nigeria. 3 Federal Medical Centre, Keffi, Nasarawa State, Nigeria",
+      },
+    ],
+  },
+  {
+    journal:
+      "Transurethral band a rare aetiology of bladder outlet obstruction.2Dept. of Surgery, Federal Medical Centre, Gusau, Nigeria https://doi.org/10.18231/j.yjom.2024.033 ",
+    authors: [
+      {
+        name: "Abdullahi Khalid 1*, Abubakar Isiyaku1, John Solomon Marcus2, Abubakar Sadiq Muhammad1, Abdullah Abdulwahab Ahmed1 1Dept. of Surgery, Tetfund Centre of Excellence in Urology and Nephrology, Institute of Urology, Sokoto, Nigeria ",
       },
     ],
   },
