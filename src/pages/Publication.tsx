@@ -271,6 +271,42 @@ const elements = [
       },
     ],
   },
+  {
+    journal:
+      "Complications profile following regional anesthesia: Comparative analysis between ankle and unilateral spinal blocks for foot surgery DOI 10.25259/JHSR_42_2023",
+    authors: [
+      {
+        name: "Bashir Garba Aljannare1 , Abdullahi Khalid2 , Aliyu Abdulrahaman1, Ibrahim Galadima Bello1 1Department of Anesthesia and Intensive Care, Usmanu Danfodiyo University Teaching Hospital, 2Department of Surgery, Tetfund Center of Excellence in Urology and Nephrology, Institute of Urology and Nephrology, Usmanu Danfodiyo University and Teaching Hospital, Sokoto, Nigeria",
+      },
+    ],
+  },
+  {
+    journal:
+      "Shattered Kidney: A Fallout of Armed Banditry. doi D 10.30491/hpr.2023.402567.1395 ",
+    authors: [
+      {
+        name: "Abdullahi Khalid 1* , Ibrahim Umar Abubakar 2 , Ahmed Mohammed Umar 1 , Abubakar Sadiq Muhammad 1 , Ngwobia Peter Agwu 1 , Abdullah Abdulwahab-Ahmed 1 1 Tetfund Centre of Excellence in Urology and Nephrology, Institute of Urology and Nephrology, Usmanu Danfodiyo University and Teaching Hospital Sokoto, Nigeria 2 General Surgery Unit, Usmanu Danfodiyo University Teaching Hospital, Sokoto, Nigeria",
+      },
+    ],
+  },
+  {
+    journal:
+      "36.	Scrotal calcinosis cutis an unrelated finding in benign prostatic hyperplasia patient, is treatment sine qua non? A case report. DOI 10.25259/JHSR_29_2023 ",
+    authors: [
+      {
+        name: "Abdullahi Khalid1, Olusegun George Obadele1, Usman Bello2 , Usman Kamba Haruna 1, Abdullah Abdulwahab-Ahmed1 1Department of Surgery, Tetfund Centre of Excellence in Urology and Nephrology, Institute of Urology and Nephrology, 2Morbid Anatomy and Forensic Medicine, College of Health Sciences, Usmanu Danfodio University, Sokoto, Nigeria ",
+      },
+    ],
+  },
+  {
+    journal:
+      "35.	Postoperative pain following ankle block and unilateral subarachnoid block for foot surgeries: A randomised controlled trial. doi: 10.25259/SAJHS_6_2023 ",
+    authors: [
+      {
+        name: "Bashir Garba Aljannare1, Mohammed Bashir Rabi’u2, Alhassan Datti Mohammed3, Abdullahi Khalid4 1Department of Anesthesia and Intensive Care, Usmanu Danfodiyo University Teaching Hospital Sokoto, 2Department of Anesthesia and Intensive Care, Abubakar Tafawa Balewa University Teaching Hospital, Bauchi, 3Anaesthesia and Critical Care, Aminu Kano University Teaching Hospital, Kano, 4Institute of Urology and Nephrology, Usmanu Danfodiyo University and Teaching Hospital, Sokoto.",
+      },
+    ],
+  },
 ];
 function PubTable() {
   const rows = elements.map((element, index) => (

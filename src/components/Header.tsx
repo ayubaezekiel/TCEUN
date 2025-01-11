@@ -24,7 +24,7 @@ const links = [
     label: "TRAINING",
     links: [
       { link: "/fellow", label: "Post Fellowship" },
-      { link: "https://www.pg.udusok.edu.ng", label: "PhD. Urology" },
+      { link: "https://www.pg.udusok.edu.ng/", label: "PhD. Urology" },
       { link: "https://www.pg.udusok.edu.ng/", label: "PhD. Urology Nursing" },
       { link: "https://pg.udusok.edu.ng/", label: "MSc. Urology Nursing" },
       { link: "https://pg.udusok.edu.ng/", label: "PGD Urology" },
