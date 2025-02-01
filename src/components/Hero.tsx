@@ -13,19 +13,19 @@ export function Hero() {
             Anouncement
           </h1>
           <h1 className="font-bold mt-4">
-          POST GRADUATE DIPLOMA IN UROLOGY NURSING 2024/2025 ADMISSION
+         INAUGURATION OF KIDNEY TRANSPLANT PROGRAMME
           </h1>
-          <p>
+          {/* <p>
           Applications are invited from suitable qualified candidate for admission into post Graduate Diploma in Urology Nursing
-          </p>
-          <Badge> Reg. Deadline: 31st January, 2025</Badge>
+          </p> */}
+          <Badge> DATE: 4th Fabruary, 2025</Badge>
           <h1 className="font-bold mt-4 text-red-600">
-          Africa's First Professional Urology Nursing Programme
+          Time: 10:00 am
           </h1>
-          <p>Accredited by NMCN for Registration as a Specialist Urology Nurse</p>
-          <h3 className="font-bold mt-4 ">
-        To Apply Visit  <a className="text-blue-600" href="http://www.pg.udusok.edu.ng">www.pg.udusok.edu.ng</a>
-          </h3>
+          <p className="text-red-600">VENUE: TETFund Centre of Ecellence Conference Hall, UDUTH</p>
+           <h3 className="font-bold mt-4 ">
+        For More Details  <a className="text-blue-600" href="http://www.pg.udusok.edu.ng">www.pg.udusok.edu.ng</a>
+          </h3> 
         </div>
       </div>
     </div>
