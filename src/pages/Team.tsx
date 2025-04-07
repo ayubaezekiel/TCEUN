@@ -1,292 +1,569 @@
-import { Card, Container, Image } from "@mantine/core";
+import { Box, Card, Container, Image, rgba } from "@mantine/core";
 import {
-  IconBrandFacebook,
   IconBrandLinkedin,
   IconBrandTwitter,
+  IconExternalLink,
+  IconMail,
 } from "@tabler/icons-react";
-import { ReactNode } from "react";
+import { ReactNode, useState } from "react";
 
 import { Link } from "react-router-dom";
-import director from "../assets/images/director.jpg";
-import ibrahim from "../assets/images/ibrahim.jpg";
-import nasiru from "../assets/images/nasiru sahabi.jpg";
-import bello from "../assets/images/MB Bello.jpg";
-import maaji from "../assets/images/unnamed.jpg";
-import makusidi from "../assets/images/Dr Makusidi A.M.png";
 import agwu from "../assets/images/agwu.jpg";
-import khalid from "../assets/images/My Passport 20-01-2021.jpg";
+import director from "../assets/images/director.jpg";
+import makusidi from "../assets/images/Dr Makusidi A.M.png";
+import ibrahim from "../assets/images/ibrahim.jpg";
 import imam from "../assets/images/Imam.jpg";
+import bello from "../assets/images/MB Bello.jpg";
+import khalid from "../assets/images/My Passport 20-01-2021.jpg";
+import nasiru from "../assets/images/nasiru sahabi.jpg";
 import sadiq from "../assets/images/sadiq.png";
 import sani from "../assets/images/sani.jpg";
-
+import maaji from "../assets/images/unnamed.jpg";
 import zarau from "../assets/images/Zarau.jpg";
-import { PageBreadcrumbs } from "../components/Breadcrumbs";
 
-export default function OurTeam() {
+import {
+  ActionIcon,
+  Anchor,
+  Badge,
+  Divider,
+  Group,
+  Overlay,
+  Paper,
+  rem,
+  SimpleGrid,
+  Stack,
+  Text,
+  Title,
+  Transition,
+  useMantineTheme,
+} from "@mantine/core";
+
+// --- Reusable Section Title Component with animation ready classes ---
+interface SectionTitleProps {
+  title: string;
+  subtitle?: string;
+  accent?: boolean;
+}
+
+function SectionTitle({ title, subtitle, accent = false }: SectionTitleProps) {
+  const theme = useMantineTheme();
   return (
-    <div>
-      <PageBreadcrumbs
-        currentUrl={[
-          { href: "/", title: "Home" },
-          { href: "/news/", title: "Team" },
-        ]}
-        title="Our Team"
+    <Stack
+      align="center"
+      gap="sm"
+      mb={{ base: "xl", sm: "2rem" }}
+      className="section-title"
+    >
+      <Title
+        order={1}
+        tt="uppercase"
+        ta="center"
+        fz={{ base: rem(28), sm: rem(40) }}
+        fw={700}
+        c={accent ? theme.primaryColor : undefined}
+        className="title-animate"
+      >
+        {title}
+      </Title>
+      <Divider
+        size="md"
+        w={rem(80)}
+        color={theme.primaryColor}
+        className="divider-animate"
       />
-      <Container size={"xl"}>
-        <div className="flex justify-center flex-col my-24">
-          <h1 className="uppercase text-4xl border-cyan-600 inline-flex font-bold justify-center text-gray-700">
-            OUR STAFFS
-          </h1>
-          <span className="border-b-4 border-cyan-600 w-14 mx-auto my-4"></span>
-          <p className="text-center text-gray-700 font-normal text-xl">
-            MEET OUR PRINCIPAL OFFICERS
-          </p>
-        </div>
-
-        <div className="grid md:grid-cols-4 gap-4 mx-auto">
-          <StaffCard
-            notVc
-            image={director}
-            name="Prof Ismaila Arzika Mungadi"
-            title="Director"
-            note="MBBS(UDUS), FRCSEd, FWACS, FMAS, Cert Endourol"
-            Socials={
-              <div className="flex gap-6 mt-2">
-                <IconBrandFacebook size={30} />
-                <IconBrandTwitter size={30} />
-                <IconBrandLinkedin size={30} />
-              </div>
-            }
-          />
-          <StaffCard
-            image={bello}
-            notVc
-            name="Dr. Muhammad Bashir Bello"
-            title="Research Officer"
-            note="DVM, MSc, PhD"
-            Socials={
-              <div className="flex gap-6 mt-2">
-                <IconBrandFacebook size={30} />
-                <IconBrandTwitter size={30} />
-                <IconBrandLinkedin size={30} />
-              </div>
-            }
-          />
-          <StaffCard
-            image={nasiru}
-            notVc
-            name="Mallam Nasiru Sahabi"
-            title="Docummentation Officer"
-            note="......."
-            Socials={
-              <div className="flex gap-6 mt-2">
-                <IconBrandFacebook size={30} />
-                <IconBrandTwitter size={30} />
-                <IconBrandLinkedin size={30} />
-              </div>
-            }
-          />
-          <StaffCard
-            notVc
-            image={ibrahim}
-            name="Malam Ibrahim Lawal"
-            title="Admin Officer"
-            note="BSc"
-            Socials={
-              <div className="flex gap-6 mt-2 ">
-                <IconBrandFacebook size={30} />
-                <IconBrandTwitter size={30} />
-                <IconBrandLinkedin size={30} />
-              </div>
-            }
-          />
-          <StaffCard
-            notVc
-            image={zarau}
-            name="Hajiya Zara'u Umar"
-            title="Finance Officer"
-            note="BSc"
-            Socials={
-              <div className="flex gap-6 mt-2 ">
-                <IconBrandFacebook size={30} />
-                <IconBrandTwitter size={30} />
-                <IconBrandLinkedin size={30} />
-              </div>
-            }
-          />
-        </div>
-      </Container>
-      <Container size={"xl"}>
-        <div className="flex justify-center flex-col my-24">
-          <h1 className="uppercase text-4xl border-cyan-600 inline-flex font-bold justify-center text-gray-700">
-            CLINICAL STAFFS
-          </h1>
-          <span className="border-b-4 border-cyan-600 w-14 mx-auto my-4"></span>
-          <p className="text-center text-gray-700 font-normal text-xl">
-            MEET OUR RENOWED CLINICAL OFFICERS
-          </p>
-        </div>
-
-        <div className="grid md:grid-cols-4 gap-4 mx-auto">
-          <StaffCard
-            notVc
-            image={director}
-            name="Prof Ismaila Arzika Mungadi"
-            title="Professor of Surgery"
-            note="MBBS,FRCSEd, FWACS FMAS, Cert Endourol"
-            Socials={
-              <div className="flex gap-6 mt-2">
-                <IconBrandFacebook size={30} />
-                <IconBrandTwitter size={30} />
-                <IconBrandLinkedin size={30} />
-              </div>
-            }
-          />
-          <StaffCard
-            notVc
-            image={maaji}
-            name="Prof Sadisu Mohammed Maaji"
-            title="Radiolgist"
-            note="MBBS,FMCR, FWACS FAIMER, Cert Endourol"
-            Socials={
-              <div className="flex gap-6 mt-2">
-                <IconBrandFacebook size={30} />
-                <IconBrandTwitter size={30} />
-                <IconBrandLinkedin size={30} />
-              </div>
-            }
-          />
-          <StaffCard
-            image={makusidi}
-            notVc
-            name="Prof. Makusidi A.M"
-            title="Prof.of Medicine & Consultant Physician/Nephrolologist"
-            note="MBBS(UDUS), FMCP(Nig)"
-            Socials={
-              <div className="flex gap-6 mt-2">
-                <IconBrandFacebook size={30} />
-                <IconBrandTwitter size={30} />
-                <IconBrandLinkedin size={30} />
-              </div>
-            }
-          />
-          <StaffCard
-            image={agwu}
-            notVc
-            name="Prof. Ngwobia Peter Agwu"
-            title="Consultant Urologist"
-            note="MBBS, FRCSEd"
-            Socials={
-              <div className="flex gap-6 mt-2">
-                <IconBrandFacebook size={30} />
-                <IconBrandTwitter size={30} />
-                <IconBrandLinkedin size={30} />
-              </div>
-            }
-          />
-          <StaffCard
-            notVc
-            image={khalid}
-            name="Dr. Abdullahi Khalid"
-            title="Consultant Urological Surgeon"
-            note="MBBS, FWACS"
-            Socials={
-              <div className="flex gap-6 mt-2">
-                <IconBrandFacebook size={30} />
-                <IconBrandTwitter size={30} />
-                <IconBrandLinkedin size={30} />
-              </div>
-            }
-          />
-          <StaffCard
-            notVc
-            image={sadiq}
-            name="Dr. Abubakar Sadiq Muhammad"
-            title="Consultant Urological Surgeon/ Associate Lecturer"
-            note="MBBS, FMCS (Urol), FWACS (Urol)"
-            Socials={
-              <div className="flex gap-6 mt-2">
-                <IconBrandFacebook size={30} />
-                <IconBrandTwitter size={30} />
-                <IconBrandLinkedin size={30} />
-              </div>
-            }
-          />
-          <StaffCard
-            notVc
-            image={imam}
-            name="Dr. Mustapha Umar Imam"
-            title="Associate Professor"
-            note="MBBS, PhD"
-            Socials={
-              <div className="flex gap-6 mt-2">
-                <IconBrandFacebook size={30} />
-                <IconBrandTwitter size={30} />
-                <IconBrandLinkedin size={30} />
-              </div>
-            }
-          />
-          <StaffCard
-            notVc
-            image={sani}
-            name="Dr. Abdurrahman Muhammad Sani"
-            title="Senior Lecturer in Nursing Sciences"
-            note="RN, BNSc, HND(Public Health Nursing) FWACN, MSc, PhD"
-            Socials={
-              <div className="flex gap-6 mt-2">
-                <IconBrandFacebook size={30} />
-                <IconBrandTwitter size={30} />
-                <IconBrandLinkedin size={30} />
-              </div>
-            }
-          />
-        </div>
-      </Container>
-    </div>
+      {subtitle && (
+        <Text
+          ta="center"
+          c="dimmed"
+          fz={{ base: "md", sm: "lg" }}
+          maw={rem(800)}
+          className="subtitle-animate"
+        >
+          {subtitle}
+        </Text>
+      )}
+    </Stack>
   );
 }
-interface CardProps {
-  Socials: ReactNode;
+
+// --- Staff Data ---
+const principalOfficers = [
+  {
+    image: director,
+    name: "Prof Ismaila Arzika Mungadi",
+    title: "Director",
+    note: "MBBS(UDUS), FRCSEd, FWACS, FMAS, Cert Endourol",
+    readMoreLink: "/team/mungadi",
+    email: "mungadi@example.com",
+    featured: true,
+  },
+  {
+    image: bello,
+    name: "Dr. Muhammad Bashir Bello",
+    title: "Research Officer",
+    note: "DVM, MSc, PhD",
+    email: "mbello@example.com",
+  },
+  {
+    image: nasiru,
+    name: "Mallam Nasiru Sahabi",
+    title: "Documentation Officer",
+    note: "BSc Documentation Science, MSc Information Management",
+    email: "nsahabi@example.com",
+  },
+  {
+    image: ibrahim,
+    name: "Malam Ibrahim Lawal",
+    title: "Admin Officer",
+    note: "BSc Business Administration, Dip. HR Management",
+    email: "ilawal@example.com",
+  },
+  {
+    image: zarau,
+    name: "Hajiya Zara'u Umar",
+    title: "Finance Officer",
+    note: "BSc Accounting, ICAN Certified",
+    email: "zumar@example.com",
+  },
+];
+
+const clinicalStaff = [
+  {
+    image: director,
+    name: "Prof Ismaila Arzika Mungadi",
+    title: "Professor of Surgery",
+    note: "MBBS, FRCSEd, FWACS, FMAS, Cert Endourol",
+    readMoreLink: "/team/mungadi",
+    email: "mungadi@example.com",
+    featured: true,
+  },
+  {
+    image: maaji,
+    name: "Prof Sadisu Mohammed Maaji",
+    title: "Radiologist",
+    note: "MBBS, FMCR, FWACS, FAIMER, Cert Endourol",
+    email: "smaaji@example.com",
+  },
+  {
+    image: makusidi,
+    name: "Prof. Makusidi A.M",
+    title: "Prof. of Medicine & Consultant Physician/Nephrologist",
+    note: "MBBS(UDUS), FMCP(Nig)",
+    email: "makusidi@example.com",
+  },
+  {
+    image: agwu,
+    name: "Prof. Ngwobia Peter Agwu",
+    title: "Consultant Urologist",
+    note: "MBBS, FRCSEd",
+    email: "agwu@example.com",
+  },
+  {
+    image: khalid,
+    name: "Dr. Abdullahi Khalid",
+    title: "Consultant Urological Surgeon",
+    note: "MBBS, FWACS",
+    email: "akhalid@example.com",
+  },
+  {
+    image: sadiq,
+    name: "Dr. Abubakar Sadiq Muhammad",
+    title: "Consultant Urological Surgeon/ Associate Lecturer",
+    note: "MBBS, FMCS (Urol), FWACS (Urol)",
+    email: "asmuhammad@example.com",
+  },
+  {
+    image: imam,
+    name: "Dr. Mustapha Umar Imam",
+    title: "Associate Professor",
+    note: "MBBS, PhD",
+    email: "muimam@example.com",
+  },
+  {
+    image: sani,
+    name: "Dr. Abdurrahman Muhammad Sani",
+    title: "Senior Lecturer in Nursing Sciences",
+    note: "RN, BNSc, HND(Public Health Nursing) FWACN, MSc, PhD",
+    email: "amsani@example.com",
+  },
+];
+
+function TeamHero() {
+  const theme = useMantineTheme();
+
+  return (
+    <Box
+      pos="relative"
+      h={{ base: rem(500), md: rem(600) }}
+      bg={theme.colors[theme.primaryColor][9]}
+    >
+      <Container size="lg" h="100%">
+        <Stack
+          align="center"
+          justify="center"
+          h="100%"
+          gap="xl"
+          pos="relative"
+          ta="center"
+        >
+          <Badge
+            variant="filled"
+            size="lg"
+            color="white"
+            px="xl"
+            py="xs"
+            style={{ backgroundColor: rgba(theme.white, 0.2) }}
+          >
+            Excellence in Specialized Care
+          </Badge>
+
+          <Title
+            order={1}
+            fz={{ base: rem(36), sm: rem(52) }}
+            fw={900}
+            lh={1.1}
+            className="animate-title"
+            c={"white"}
+          >
+            Our Exceptional Team
+          </Title>
+
+          <Text
+            size="xl"
+            maw={rem(750)}
+            opacity={0.95}
+            lh={1.6}
+            className="animate-text"
+            c={"white"}
+          >
+            Meet the dedicated professionals making breakthroughs in medical
+            research and treatment
+          </Text>
+        </Stack>
+      </Container>
+    </Box>
+  );
+}
+
+// --- Main Team Page Component ---
+export default function OurTeam() {
+  const theme = useMantineTheme();
+  const [activeFilter, setActiveFilter] = useState("all");
+
+  return (
+    <Box>
+      <TeamHero />
+
+      {/* Principal Officers Section */}
+      <Container size="xl" py={{ base: "xl", sm: "3rem" }}>
+        <SectionTitle
+          title="Our Staff"
+          subtitle="Meet our dedicated team of principal officers who lead our organization with expertise and vision"
+        />
+
+        {/* Featured Officer - Director */}
+        {principalOfficers
+          .filter((officer) => officer.featured)
+          .map((director) => (
+            <Paper
+              withBorder
+              shadow="md"
+              p="xl"
+              radius="lg"
+              mb="3rem"
+              key={director.name}
+              style={{
+                background: `linear-gradient(45deg, ${theme.white}, ${
+                  theme.colors[theme.primaryColor][1]
+                })`,
+              }}
+            >
+              <SimpleGrid cols={{ base: 1, md: 2 }} spacing="xl">
+                <Box>
+                  <Image
+                    src={director.image}
+                    alt={director.name}
+                    radius="md"
+                    h={{ base: rem(300), md: rem(400) }}
+                    fit="cover"
+                    style={{ boxShadow: theme.shadows.md }}
+                  />
+                </Box>
+                <Stack justify="center">
+                  <Badge
+                    color={theme.primaryColor}
+                    size="lg"
+                    variant="filled"
+                    w="fit-content"
+                  >
+                    {director.title}
+                  </Badge>
+                  <Title order={2} fz={{ base: "2rem", md: "2.5rem" }}>
+                    {director.name}
+                  </Title>
+                  <Text fz="lg">{director.note}</Text>
+                  <Text c="dimmed" fz="md">
+                    Leading our organization with vision and expertise, driving
+                    innovation and excellence in healthcare.
+                  </Text>
+                  <Group gap="md" mt="md">
+                    <ActionIcon
+                      size="lg"
+                      variant="filled"
+                      color={theme.primaryColor}
+                      radius="xl"
+                      component="a"
+                      href={`mailto:${director.email}`}
+                    >
+                      <IconMail size="1.2rem" />
+                    </ActionIcon>
+                    <ActionIcon
+                      size="lg"
+                      variant="filled"
+                      color={theme.primaryColor}
+                      radius="xl"
+                    >
+                      <IconBrandLinkedin size="1.2rem" />
+                    </ActionIcon>
+                    <ActionIcon
+                      size="lg"
+                      variant="filled"
+                      color={theme.primaryColor}
+                      radius="xl"
+                    >
+                      <IconBrandTwitter size="1.2rem" />
+                    </ActionIcon>
+                  </Group>
+                </Stack>
+              </SimpleGrid>
+            </Paper>
+          ))}
+
+        {/* Other Principal Officers */}
+        <SimpleGrid
+          cols={{ base: 1, sm: 2, lg: 3, xl: 4 }}
+          spacing="xl"
+          verticalSpacing="xl"
+        >
+          {principalOfficers
+            .filter((officer) => !officer.featured)
+            .map((officer) => (
+              <StaffCard key={officer.name} {...officer} />
+            ))}
+        </SimpleGrid>
+      </Container>
+
+      {/* Clinical Staff Section */}
+      <Box py={{ base: "xl", sm: "3rem" }}>
+        <Container size="xl">
+          <SectionTitle
+            title="Clinical Staff"
+            subtitle="Our renowned clinical officers provide world-class patient care with expertise across medical specialties"
+          />
+
+          {/* Filter Buttons */}
+          <Group justify="center" mb="xl">
+            <Anchor
+              onClick={() => setActiveFilter("all")}
+              c={activeFilter === "all" ? theme.primaryColor : "dimmed"}
+              fw={activeFilter === "all" ? 700 : 400}
+              fz="md"
+              style={{ cursor: "pointer" }}
+            >
+              All Staff
+            </Anchor>
+            <Anchor
+              onClick={() => setActiveFilter("professors")}
+              c={activeFilter === "professors" ? theme.primaryColor : "dimmed"}
+              fw={activeFilter === "professors" ? 700 : 400}
+              fz="md"
+              style={{ cursor: "pointer" }}
+            >
+              Professors
+            </Anchor>
+            <Anchor
+              onClick={() => setActiveFilter("consultants")}
+              c={activeFilter === "consultants" ? theme.primaryColor : "dimmed"}
+              fw={activeFilter === "consultants" ? 700 : 400}
+              fz="md"
+              style={{ cursor: "pointer" }}
+            >
+              Consultants
+            </Anchor>
+          </Group>
+
+          <SimpleGrid
+            cols={{ base: 1, sm: 2, lg: 3, xl: 4 }}
+            spacing="xl"
+            verticalSpacing="xl"
+          >
+            {clinicalStaff
+              .filter((staff) => {
+                if (activeFilter === "all") return true;
+                if (activeFilter === "professors")
+                  return staff.title.toLowerCase().includes("professor");
+                if (activeFilter === "consultants")
+                  return staff.title.toLowerCase().includes("consultant");
+                return true;
+              })
+              .map((staff) => (
+                <StaffCard key={staff.name} {...staff} />
+              ))}
+          </SimpleGrid>
+        </Container>
+      </Box>
+
+      {/* Join Us CTA Section */}
+      <Container size="xl" py={{ base: "xl", sm: "3rem" }}>
+        <Paper withBorder shadow="md" p="xl" radius="lg">
+          <Stack align="center" ta="center">
+            <Title order={2} c="white">
+              Join Our Team
+            </Title>
+            <Text maw={rem(600)} mx="auto" fz="lg" c="dark" opacity={0.9}>
+              We're always looking for talented professionals to join our
+              growing team. Check our careers page for current opportunities.
+            </Text>
+            <Anchor
+              component={Link}
+              to="/careers"
+              size="lg"
+              mt="md"
+              c="white"
+              style={{
+                border: "2px solid white",
+                padding: "0.5rem 1.5rem",
+                borderRadius: theme.radius.md,
+                fontWeight: 600,
+              }}
+            >
+              View Open Positions
+            </Anchor>
+          </Stack>
+        </Paper>
+      </Container>
+    </Box>
+  );
+}
+
+interface StaffCardProps {
+  Socials?: ReactNode;
   title: string;
   note: string;
   name: string;
   image: string;
   readMoreLink?: string;
-  notVc?: boolean;
+  email?: string;
+  featured?: boolean;
 }
+
+// Enhanced StaffCard component with hover effects
 function StaffCard({
-  Socials,
   name,
   note,
   title,
   image,
-  notVc,
-  readMoreLink,
-}: CardProps) {
+  readMoreLink = "#",
+  email,
+}: StaffCardProps) {
+  const theme = useMantineTheme();
+  const [hovered, setHovered] = useState(false);
+
   return (
     <Card
-      bg={"cyan.2"}
-      styles={{
-        root: {
-          borderRadius: "0px 30px 30px 0px",
-        },
+      withBorder
+      shadow="sm"
+      padding={0}
+      radius="md"
+      style={{
+        overflow: "hidden",
+        transition: "transform 0.2s ease, box-shadow 0.2s ease",
+        transform: hovered ? "translateY(-5px)" : "none",
+        boxShadow: hovered ? theme.shadows.md : theme.shadows.sm,
       }}
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
     >
-      <Image src={image} radius={"0px 30px 30px 0px"} />
-      <div className="flex flex-col gap-2 mt-4">
-        <span className="text-lg font-semibold text-gray-700">{title}</span>
-        <span className="text-3xl font-bold text-gray-800">{name}</span>
-        <p className="text-gray-700">{note}</p>
-        {Socials}
-        {notVc && (
-          <Link
-            className="my-4 hover:text-cyan-700 text-gray-800 text-2xl"
-            to={`${readMoreLink}`}
-          >
-            Read More...
-          </Link>
+      {/* Image with overlay on hover */}
+      <Box pos="relative">
+        <Image src={image} alt={name} height={rem(240)} fit="cover" />
+        <Transition mounted={hovered} transition="fade" duration={200}>
+          {(styles) => (
+            <Overlay
+              style={{
+                ...styles,
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+              opacity={0.7}
+            >
+              <Group gap="md">
+                {email && (
+                  <ActionIcon
+                    variant="filled"
+                    color="white"
+                    radius="xl"
+                    size="lg"
+                    component="a"
+                    href={`mailto:${email}`}
+                  >
+                    <IconMail size="1.2rem" />
+                  </ActionIcon>
+                )}
+                <ActionIcon
+                  variant="filled"
+                  color="white"
+                  radius="xl"
+                  size="lg"
+                >
+                  <IconBrandLinkedin size="1.2rem" />
+                </ActionIcon>
+                <ActionIcon
+                  variant="filled"
+                  color="white"
+                  radius="xl"
+                  size="lg"
+                >
+                  <IconBrandTwitter size="1.2rem" />
+                </ActionIcon>
+              </Group>
+            </Overlay>
+          )}
+        </Transition>
+      </Box>
+
+      {/* Content Section */}
+      <Stack p="md" gap="xs">
+        <Text fz="sm" fw={600} c={theme.primaryColor} tt="uppercase">
+          {title}
+        </Text>
+        <Text fz="lg" fw={700} lineClamp={2}>
+          {name}
+        </Text>
+        <Text fz="sm" c="dimmed" lineClamp={3}>
+          {note}
+        </Text>
+
+        {/* Optional Read More Link */}
+        {readMoreLink && readMoreLink !== "#" && (
+          <Group mt="xs" align="center">
+            <Anchor
+              component={Link}
+              to={readMoreLink}
+              size="sm"
+              display="flex"
+              c={theme.primaryColor}
+            >
+              View Profile{" "}
+              <IconExternalLink
+                size="0.8rem"
+                style={{ marginLeft: "0.2rem" }}
+              />
+            </Anchor>
+          </Group>
         )}
-      </div>
+      </Stack>
     </Card>
   );
 }

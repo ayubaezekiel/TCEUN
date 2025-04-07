@@ -6,8 +6,8 @@ import "@mantine/core/styles.css";
 import "@mantine/carousel/styles.css";
 import { Button, MantineProvider, createTheme } from "@mantine/core";
 import { BrowserRouter } from "react-router-dom";
-import "@radix-ui/themes/styles.css";
-import { Theme } from "@radix-ui/themes";
+import { Notifications } from "@mantine/notifications";
+import "@mantine/dates/styles.css";
 
 const mantinetheme = createTheme({
   primaryColor: "cyan",
@@ -25,9 +25,9 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <BrowserRouter>
       <MantineProvider theme={mantinetheme}>
-        <Theme>
-          <App />
-        </Theme>
+        <App />
+
+        <Notifications position="top-right" zIndex={1001} />
       </MantineProvider>
     </BrowserRouter>
   </React.StrictMode>

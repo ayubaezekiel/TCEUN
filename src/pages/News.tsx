@@ -1,70 +1,210 @@
-import { Container } from "@mantine/core";
-import { PageBreadcrumbs } from "../components/Breadcrumbs";
+import {
+  Badge, // To access theme colors/spacing if needed
+  Box,
+  Button,
+  Card,
+  Container,
+  Group,
+  Image,
+  rem,
+  rgba,
+  SimpleGrid,
+  Stack,
+  Text,
+  Title,
+  useMantineTheme,
+} from "@mantine/core";
+import { IconCalendarEvent } from "@tabler/icons-react"; // Example icon
 
-export default function news() {
+// --- Sample Data Generation ---
+// In a real app, this would come from an API
+const sampleNewsData = [
+  {
+    id: 1,
+    title: "Workshop On Genito-urinary Reconstructions",
+    date: "June 15-16, 2024",
+    category: "Workshop",
+    description:
+      "Join leading experts for a hands-on workshop covering the latest techniques in genito-urinary reconstruction.",
+    imageUrl:
+      "https://images.unsplash.com/photo-1580281657527-47f249e8f4df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80", // Replace with relevant placeholder
+    isUpcoming: true,
+  },
+  {
+    id: 2,
+    title: "Annual Conference on Advances in Urology",
+    date: "August 5-7, 2024",
+    category: "Conference",
+    description:
+      "Presentations, discussions, and networking opportunities focusing on cutting-edge urological research and practice.",
+    imageUrl:
+      "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80", // Replace with relevant placeholder
+    isUpcoming: true,
+  },
+  {
+    id: 3,
+    title: "New Research Published on Kidney Stone Prevention",
+    date: "May 28, 2024",
+    category: "Research",
+    description:
+      "Our team's latest findings on dietary impacts on kidney stone formation have been published in the 'Journal of Urology'.",
+    imageUrl:
+      "https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80", // Replace with relevant placeholder
+    isUpcoming: false,
+  },
+  {
+    id: 4,
+    title: "Community Health Fair: Free Screenings",
+    date: "September 10, 2024",
+    category: "Community",
+    description:
+      "Visit our booth at the community health fair for free prostate health screenings and educational materials.",
+    imageUrl:
+      "https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80", // Replace with relevant placeholder
+    isUpcoming: true,
+  },
+  // Add more sample news items if needed
+];
+
+export default function NewsPage() {
   return (
     <div>
-      <PageBreadcrumbs
-        currentUrl={[
-          { href: "/", title: "Home" },
-          { href: "/news/", title: "News/Events" },
-        ]}
-        title="News/Events"
-      />
-      <Container size={"xl"}>
-        <div className="flex justify-center flex-col my-24">
-          <h1 className="uppercase text-4xl border-cyan-600 inline-flex font-bold justify-center text-gray-700">
-            Up Coming Events
-          </h1>
-          <span className="border-b-4 border-cyan-600 w-14 mx-auto my-4"></span>
-      
-         <h1 className="font-bold text-xl text-center mt-4 text-slate-600"> INSTITUTE OF UROLOGY AND NEPHROLOGY
-TETFUND CENTRE OF EXCELLENCE IN UROLOGY
-AND NEPHROLOGY </h1><h1 className="font-bold text-xl mt-4text-center text-slate-600">
-USMANU DANFODIYO UNIVERSITY, SOKOTO</h1>
-<h3 className="font-bold text-md mt-4 text-red-600">In Collaboration with Zenith Medical and Kidney Centre, Abuja</h3>
-<p>PROGRAMME OF EVENT</p>
-<li>Arrival of Guest 09:30am</li>
-<li>Arrival of Dignitaries 09:45am</li>
-<li>Opening Prayer 10:00 – 10:05am</li>
-<li>Introduction of Dignitaries 10:05 – 10:10am</li>
-<li>Opening Remarks by the Chairman 10:10 – 10:15am Prof. Riskuwa A. Shehu OON</li>
-<li>Welcome Address and Brief about the Centre by Director
-Prof. I.A. Mungadi 10:15 – 10:35am</li>
-<li>Virtual Tour of Theatre and ICU by 10:35 – 10:55am
-Prof. Abdulwahab Ahmed</li>
-<li>Remarks by Chief Medical Director, UDUTH
-Prof. Anas Sabir 10:55 – 11:00am</li>
-<li>Remarks by Vice Chancellor, UDUS
-Prof. Bashiru Garba, OFR 11:00 – 11:10am</li>
-<li>Good will message by MD Zenith Medical and Kidney Centre, Abuja
-Dr. Olatise O. Olalekan 11:10 – 11:15am</li>
-<li>Remarks by E.S TETFund
-Arc. Sonny S.T Echono 11:15 – 11:20am</li>
-<li>Remarks by the Sultan of Sokoto
-Alhaji Muhammad Sa’ad Abubakar III, CFR, mni 11:20 – 11:25am</li>
-<li>Remarks by the Executive Governor of Kebbi State
-Comrade (Dr.) Mohammed Nasiru Idris
-(Kauran Gwandu) 11:25 – 11:35am</li>
-<li>Remarks by the Executive Governor of Zamfara State
-Dr. Dauda Lawal Dare 11:35 – 11:45am</li>
-<li>Remarks by the Executive Governor of Sokoto State 11:45 – 11:55am
-Dr. Ahmad Aliyu Sokoto FCNA</li>
-<li>Vote of Thanks by
-Transplant Ethics Committee Chairman and Chairman-MAC UDUTH
-Prof. Usman Muhammad Sani 11:55 – 12:00pm</li>
-<li>Closing Prayer 12:00pm</li>
-<h4 className="font-bold text-xl mt-4 text-red-600"> DATE: 4th Fabruary, 2025</h4>
-{/* <h3>Admission Requirement: Registered Nurse with Bachelor of Nursing Sciences Qualification (BNSc or BSc)</h3>
-<h4>To apply Visit: www.pg.udusok.edu.ng</h4> */}
-<h5>Time: 10:00 am</h5>
+      <NewsHero />
 
-       
-          <span className="font-bold text-xl text-red-500">
-          VENUE: TETFund Centre of Ecellence Conference Hall, UDUTH
-          </span>
+      {/* --- News & Events Section --- */}
+      <Container size={"xl"} className="my-16 md:my-24">
+        {/* Section Title */}
+        <div className="text-center mb-12">
+          <Title
+            order={2}
+            className="uppercase text-3xl md:text-4xl font-bold text-gray-700 inline-block"
+          >
+            Latest Updates
+          </Title>
+          <div className="border-b-4 border-cyan-600 w-16 mx-auto mt-2"></div>
         </div>
+
+        {/* Grid for News Cards */}
+        <SimpleGrid
+          cols={{ base: 1, sm: 2, lg: 3 }} // Responsive columns
+          spacing="xl" // Spacing between grid items
+        >
+          {sampleNewsData.map((item) => (
+            <Card key={item.id} shadow="sm" padding="lg" radius="md" withBorder>
+              <Card.Section>
+                {/* Use aspect-ratio to maintain image shape */}
+                <Image
+                  src={item.imageUrl}
+                  height={200}
+                  alt={`Image for ${item.title}`}
+                  fit="cover" // Ensures the image covers the area
+                />
+              </Card.Section>
+
+              <Group justify="space-between" mt="md" mb="xs">
+                <Title order={3} className="font-semibold text-lg line-clamp-2">
+                  {" "}
+                  {/* Limit title lines */}
+                  {item.title}
+                </Title>
+                <Badge
+                  color={item.isUpcoming ? "red" : "cyan"}
+                  variant="light"
+                  size="sm"
+                  className="capitalize"
+                >
+                  {item.isUpcoming ? "Upcoming" : item.category}
+                </Badge>
+              </Group>
+
+              <Group gap="xs" className="text-sm text-gray-600 mb-3">
+                <IconCalendarEvent size={16} stroke={1.5} />
+                <span>{item.date}</span>
+              </Group>
+
+              <Text size="sm" c="dimmed" className="line-clamp-3 mb-4">
+                {" "}
+                {/* Limit description lines */}
+                {item.description}
+              </Text>
+
+              <Button
+                variant="light"
+                color="blue"
+                fullWidth
+                mt="md"
+                radius="md"
+              >
+                Read More
+              </Button>
+            </Card>
+          ))}
+        </SimpleGrid>
+
+        {/* Message if no news */}
+        {sampleNewsData.length === 0 && (
+          <Text ta="center" c="dimmed" mt="xl">
+            No news or events to display at this moment. Check back soon!
+          </Text>
+        )}
       </Container>
     </div>
+  );
+}
+
+function NewsHero() {
+  const theme = useMantineTheme();
+
+  return (
+    <Box
+      pos="relative"
+      h={{ base: rem(500), md: rem(600) }}
+      bg={theme.colors[theme.primaryColor][9]}
+    >
+      <Container size="lg" h="100%">
+        <Stack
+          align="center"
+          justify="center"
+          h="100%"
+          gap="xl"
+          pos="relative"
+          ta="center"
+        >
+          <Badge
+            variant="filled"
+            size="lg"
+            color="white"
+            px="xl"
+            py="xs"
+            style={{ backgroundColor: rgba(theme.white, 0.2) }}
+          >
+            Excellence in Specialized Care
+          </Badge>
+
+          <Title
+            order={1}
+            fz={{ base: rem(36), sm: rem(52) }}
+            fw={900}
+            lh={1.1}
+            className="animate-title"
+            c={"white"}
+          >
+            News & Upcoming Events
+          </Title>
+
+          <Text
+            size="xl"
+            maw={rem(750)}
+            opacity={0.95}
+            lh={1.6}
+            className="animate-text"
+            c={"white"}
+          >
+            Stay updated with the latest announcements, research highlights, and
+            upcoming workshops from our department.
+          </Text>
+        </Stack>
+      </Container>
+    </Box>
   );
 }

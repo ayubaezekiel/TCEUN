@@ -1,0 +1,16 @@
+/* src/assets/css/MissionVision.module.css (Optional) */
+.cardHover {
+  transition: background-color 0.3s ease, transform 0.3s ease;
+
+  @mixin hover {
+    /* Example: Subtle scale and background change */
+    transform: translateY(-5px);
+    background-color: light-dark(
+      var(--mantine-color-blue-0),
+      var(--mantine-color-dark-6)
+    );
+    /* Or use the cyan color if preferred: */
+    /* background-color: var(--mantine-color-cyan-7); */
+    /* color: white; */ /* Only if changing background significantly dark */
+  }
+}

@@ -29,8 +29,8 @@ export function Facility() {
       slidesToScroll={isMobile ? 1 : 3}
       mb={10}
     >
-      {IMAGES.map((i) => (
-        <Carousel.Slide>
+      {IMAGES.map((i, index) => (
+        <Carousel.Slide key={index}>
           <Image h={500} w={500} src={i} />
         </Carousel.Slide>
       ))}
