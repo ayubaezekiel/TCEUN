@@ -46,12 +46,12 @@ export function Footer() {
         </div>
         <div>
           <div className="md:flex gap-4 hidden">
-            {data.map((t) => (
-              <div>
+            {data.map((t, index) => (
+              <div key={index}>
                 <div className="font-bold my-4">{t.title}</div>
                 <div>
                   {t.links.map((a) => (
-                    <ul>
+                    <ul key={a.label}>
                       <li>
                         <Link
                           to={a.link}

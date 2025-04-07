@@ -1,10 +1,17 @@
+/* src/assets/css/HeaderMenu.module.css */
+
 .header {
-  background-color: var(--mantine-color-body);
-  border-bottom: rem(1px) solid
-    light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-4));
+  position: sticky; /* Make header sticky */
+  top: 0;
+  z-index: 1000; /* Ensure it's above other content */
+  background-color: var(--mantine-color-body); /* Use theme background */
+  border-bottom: 1px solid
+    light-dark(var(--mantine-color-gray-2), var(--mantine-color-dark-5));
+  box-shadow: var(--mantine-shadow-sm); /* Add subtle shadow */
 }
 
 .inner {
+  height: rem(70px); /* Slightly taller header */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -13,21 +20,86 @@
 .link {
   display: block;
   line-height: 1;
-  padding: rem(8px) rem(12px);
+  padding: rem(10px) rem(16px); /* Adjusted padding */
   border-radius: var(--mantine-radius-sm);
   text-decoration: none;
   color: light-dark(var(--mantine-color-gray-7), var(--mantine-color-dark-0));
   font-size: var(--mantine-font-size-sm);
-  font-weight: 500;
+  font-weight: 600; /* Slightly bolder */
+  transition: background-color 0.2s ease, color 0.2s ease; /* Smooth transition */
 
   @mixin hover {
     background-color: light-dark(
-      var(--mantine-color-gray-0),
+      var(--mantine-color-gray-1),
       var(--mantine-color-dark-6)
     );
+    color: var(--mantine-color-blue-6); /* Use theme primary color on hover */
   }
 }
 
 .linkLabel {
   margin-right: rem(5px);
+}
+
+.topBar {
+  background-color: var(--mantine-color-blue-7); /* Using Mantine blue */
+  color: white;
+  padding: rem(8px) 0; /* Vertical padding */
+}
+
+.topBarContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Allow wrapping on small screens */
+  gap: rem(16px); /* Gap between items */
+}
+
+.topBarItem {
+  display: flex;
+  align-items: center;
+  gap: rem(6px);
+  font-size: var(--mantine-font-size-xs);
+
+  @media (min-width: em(768px)) {
+    /* md breakpoint */
+    font-size: var(--mantine-font-size-sm);
+  }
+}
+
+.mobileMenu {
+  padding: var(--mantine-spacing-md);
+}
+
+.mobileLink {
+  display: block;
+  padding: var(--mantine-spacing-xs) var(--mantine-spacing-sm);
+  border-radius: var(--mantine-radius-sm);
+  text-decoration: none;
+  color: light-dark(var(--mantine-color-gray-7), var(--mantine-color-dark-0));
+  font-weight: 500;
+  font-size: var(--mantine-font-size-md); /* Larger font for mobile */
+
+  @mixin hover {
+    background-color: light-dark(
+      var(--mantine-color-gray-1),
+      var(--mantine-color-dark-6)
+    );
+  }
+}
+
+.mobileSubLink {
+  padding: var(--mantine-spacing-xs) var(--mantine-spacing-sm);
+  padding-left: rem(32px); /* Indent sub-links */
+  border-radius: var(--mantine-radius-sm);
+  text-decoration: none;
+  color: light-dark(var(--mantine-color-gray-6), var(--mantine-color-dark-1));
+  font-size: var(--mantine-font-size-sm);
+
+  @mixin hover {
+    background-color: light-dark(
+      var(--mantine-color-gray-0),
+      var(--mantine-color-dark-7)
+    );
+  }
 }

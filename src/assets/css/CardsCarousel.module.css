@@ -1,26 +1,132 @@
-.price {
-  color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
-}
+/* src/assets/css/CardsCarousel.module.css */
 
 .carousel {
-  @mixin hover {
-    .carouselControls {
-      opacity: 1;
-    }
-  }
+  /* Keep existing styles if they work, or adjust */
+  max-width: 100%; /* Ensure it doesn't overflow container */
 }
 
 .carouselControls {
-  transition: opacity 150ms ease;
-  opacity: 0;
+  /* Example: Make controls more prominent */
+  /* background-color: rgba(0, 0, 0, 0.3); */
+  /* padding: rem(5px); */
+  /* border-radius: var(--mantine-radius-sm); */
 }
 
 .carouselIndicator {
-  width: rem(4px);
-  height: rem(4px);
+  width: rem(6px);
+  height: rem(6px);
   transition: width 250ms ease;
+  background-color: white; /* Ensure visibility on dark images */
+  opacity: 0.7;
 
   &[data-active] {
-    width: rem(16px);
+    width: rem(18px);
+    background-color: var(
+      --mantine-color-blue-5
+    ); /* Use theme color for active */
+    opacity: 1;
   }
+}
+
+/* Style for the text overlay within the carousel slide */
+.carouselOverlay {
+  position: absolute;
+  bottom: var(--mantine-spacing-xl); /* Position from bottom */
+  left: var(--mantine-spacing-xl);
+  right: var(--mantine-spacing-xl);
+  max-width: rem(600px); /* Max width for readability */
+  margin-left: auto;
+  margin-right: auto;
+
+  /* Adjust positioning for smaller screens if needed */
+  @media (max-width: em(768px)) {
+    /* md breakpoint */
+    bottom: var(--mantine-spacing-lg);
+    left: var(--mantine-spacing-md);
+    right: var(--mantine-spacing-md);
+  }
+
+  @media (max-width: em(576px)) {
+    /* sm breakpoint */
+    position: relative; /* Stack below image on very small screens */
+    bottom: auto;
+    left: auto;
+    right: auto;
+    margin: 0; /* Remove margins */
+    max-width: 100%;
+    border-radius: 0; /* Remove radius if stacking */
+    box-shadow: none; /* Remove shadow if stacking */
+    background-color: transparent; /* Make transparent if stacking */
+    padding: var(--mantine-spacing-md) 0; /* Add padding if stacking */
+  }
+}
+
+.overlayTitle {
+  color: var(--mantine-color-white); /* White title for contrast */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6); /* Shadow for readability */
+  font-size: clamp(1.5rem, 4vw, 2.2rem); /* Responsive font size */
+  line-height: 1.2;
+  margin-bottom: var(--mantine-spacing-sm);
+
+  @media (max-width: em(576px)) {
+    /* sm breakpoint */
+    color: var(--mantine-color-black); /* Change color if stacking */
+    text-shadow: none;
+    text-align: center;
+  }
+}
+
+.overlayText {
+  color: var(--mantine-color-white);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+  opacity: 0.9;
+  line-height: 1.5;
+  margin-bottom: var(--mantine-spacing-lg);
+
+  @media (max-width: em(576px)) {
+    /* sm breakpoint */
+    color: var(--mantine-color-gray-7); /* Change color if stacking */
+    text-shadow: none;
+    text-align: center;
+    margin-bottom: var(--mantine-spacing-md);
+  }
+}
+
+.overlayButton {
+  /* Style the button if needed, Mantine Button styles usually suffice */
+  @media (max-width: em(576px)) {
+    /* sm breakpoint */
+    /* Center button if needed when stacking */
+    margin-left: auto;
+    margin-right: auto;
+    display: block; /* Make button block to center with margin */
+    width: fit-content;
+  }
+}
+
+/* Styles for the Announcement Card */
+.announcementCard {
+  height: 100%; /* Make card fill the grid column height */
+  display: flex;
+  flex-direction: column;
+  background-color: light-dark(
+    var(--mantine-color-blue-0),
+    var(--mantine-color-dark-7)
+  ); /* Light blue/dark theme background */
+}
+
+.announcementHeader {
+  border-bottom: 1px solid
+    light-dark(var(--mantine-color-blue-2), var(--mantine-color-dark-5));
+  padding-bottom: var(--mantine-spacing-sm);
+  margin-bottom: var(--mantine-spacing-md);
+}
+
+.announcementContent {
+  flex-grow: 1; /* Allow content to take available space */
+}
+
+.announcementTimeHighlight {
+  color: var(--mantine-color-red-6); /* Use theme red */
+  font-weight: 600;
 }

@@ -10,7 +10,7 @@ import NewsPage from "./pages/News";
 import PublicationPage from "./pages/Publication";
 import { Footer } from "./components/Footer";
 import ContactUs from "./pages/Contact";
-import GalleryPage from "./pages/Gallerys";
+import GalleryPage from "./pages/Gallery";
 
 function App() {
   return (
@@ -25,7 +25,7 @@ function App() {
         <Route element={<ContactUs />} path="contact/" />
         <Route element={<NewsPage />} path="news/" />
         <Route element={<PublicationPage />} path="publication/" />
-        <Route element={<GalleryPage />} path="gallerys/" />
+        <Route element={<GalleryPage />} path="gallery/" />
       </Routes>
 
       <Footer />

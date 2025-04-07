@@ -1,6 +1,13 @@
 import { Paper, Table } from "@mantine/core";
-import { PageBreadcrumbs } from "../components/Breadcrumbs";
 
+import {
+  Container, // Added
+  Divider, // Added
+  Stack, // Added
+  Text, // Added
+  Title, // Added
+  useMantineTheme,
+} from "@mantine/core";
 const elements = [
   {
     journal:
@@ -389,59 +396,89 @@ const elements = [
     ],
   },
 ];
+
+// --- Improved PubTable Component ---
 function PubTable() {
   const rows = elements.map((element, index) => (
     <Table.Tr key={index}>
       <Table.Td>{index + 1}</Table.Td>
       <Table.Td>
-        {element.authors.map((a) => (
-          <div>{a.name}</div>
+        {/* Use Text component for consistency */}
+        {element.authors.map((a, authorIndex) => (
+          <Text size="sm" key={authorIndex}>
+            {a.name}
+          </Text>
         ))}
       </Table.Td>
       <Table.Td>
-        <div>{element.journal}</div>
+        {/* Use Text component, potentially smaller size if needed */}
+        <Text size="sm">{element.journal}</Text>
       </Table.Td>
     </Table.Tr>
   ));
 
   return (
-    <Paper p={10} shadow="md">
-      <Table>
-        <Table.Thead>
-          <Table.Tr>
-            <Table.Th>SN</Table.Th>
-            <Table.Th>Author(s)</Table.Th>
-            <Table.Th>Paper</Table.Th>
-          </Table.Tr>
-        </Table.Thead>
-        <Table.Tbody>{rows}</Table.Tbody>
-      </Table>
+    // Add padding and shadow directly to Paper if desired
+    <Paper p="md" shadow="sm" withBorder radius="md">
+      {/* ScrollContainer for responsiveness on small screens */}
+      <Table.ScrollContainer minWidth={600}>
+        <Table
+          striped // Adds zebra striping
+          highlightOnHover // Highlights row on hover
+          withTableBorder // Adds border around the table
+          withColumnBorders // Adds border between columns
+        >
+          <Table.Thead>
+            <Table.Tr>
+              <Table.Th style={{ width: "50px" }}>SN</Table.Th>{" "}
+              {/* Optional: fixed width for SN */}
+              <Table.Th>Author(s)</Table.Th>
+              <Table.Th>Journal / Publication Details</Table.Th>
+            </Table.Tr>
+          </Table.Thead>
+          <Table.Tbody>{rows}</Table.Tbody>
+        </Table>
+      </Table.ScrollContainer>
     </Paper>
   );
 }
 
+// --- Improved PublicationPage Component ---
 export default function PublicationPage() {
+  const theme = useMantineTheme();
+
   return (
-    <div>
-      <PageBreadcrumbs
-        currentUrl={[
-          { href: "/", title: "Home" },
-          { href: "/news/", title: "Publications" },
-        ]}
-        title="Publications"
-      />
-      <div className="flex justify-center flex-col my-24">
-        <h1 className="uppercase text-4xl border-cyan-600 inline-flex font-bold justify-center text-gray-700">
+    <Container size="xl" my="xl">
+      {" "}
+      {/* Added Container and vertical margin */}
+      {/* --- Page Title Section (Using Mantine components) --- */}
+      <Stack align="center" mb="xl">
+        {" "}
+        {/* Center title block */}
+        <Title
+          order={1}
+          ta="center"
+          className="uppercase text-3xl md:text-4xl font-bold text-gray-700" // Keep some Tailwind for specific styles if needed
+        >
           Recent Publications
-        </h1>
-        <span className="border-b-4 border-cyan-600 w-14 mx-auto my-4"></span>
-        <p className="text-center text-gray-700 font-normal text-xl">
-          2021 TO 2023
-        </p>
-      </div>
+        </Title>
+        <Divider
+          size="md"
+          color={theme.colors.cyan[6]} // Use theme color
+          className="w-16" // Keep width style
+        />
+        <Text ta="center" c="dimmed" fz="lg">
+          {" "}
+          {/* Use Text component */}
+          2021 - 2023
+        </Text>
+      </Stack>
+      {/* --- Table Section --- */}
       <div>
+        {" "}
+        {/* Keep this div or remove if Container provides enough structure */}
         <PubTable />
       </div>
-    </div>
+    </Container>
   );
 }

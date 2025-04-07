@@ -1,15 +1,6 @@
-import { PageBreadcrumbs } from "../components/Breadcrumbs";
-
 export default function S() {
   return (
     <div>
-      <PageBreadcrumbs
-        currentUrl={[
-          { href: "/", title: "Home" },
-          { href: "/contact/", title: "Urethral And Genetal Reconstruction" },
-        ]}
-        title="Post Fellowship Program"
-      />
       <section className="inner-page">
         <div className="p-8">
           <h1 className="p-4 font-bold text-center text-3xl ">
