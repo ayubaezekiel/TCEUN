@@ -9,7 +9,6 @@ import {
   Grid,
   Group,
   Paper,
-  rem,
   Stack,
   Text,
   Title,
@@ -175,7 +174,7 @@ function AnnouncementCard() {
       {/* Header - Improved styling */}
       <Group gap="xs" className={classes.announcementHeader} mb="md">
         <Box bg="blue.6" p={8} style={{ borderRadius: "50%" }}>
-          <IconPhone size={rem(18)} color={theme.white} />
+          <IconPhone size={16} color={theme.white} />
         </Box>
         <Title order={3} c="blue.7" fw={600}>
           Announcement
@@ -208,7 +207,7 @@ function AnnouncementCard() {
           <Stack gap="sm">
             <Group gap="md" align="center">
               <IconCalendarEvent
-                size={rem(18)}
+                size={16}
                 stroke={1.5}
                 color={theme.colors.blue[6]}
               />
@@ -218,22 +217,14 @@ function AnnouncementCard() {
             </Group>
 
             <Group gap="md" align="center">
-              <IconClock
-                size={rem(18)}
-                stroke={1.5}
-                color={theme.colors.red[6]}
-              />
+              <IconClock size={16} stroke={1.5} color={theme.colors.red[6]} />
               <Text size="sm" fw={500} c="red.7">
                 5:00 PM WAT (10:00 AM MDT)
               </Text>
             </Group>
 
             <Group gap="md" align="center">
-              <IconMapPin
-                size={rem(18)}
-                stroke={1.5}
-                color={theme.colors.gray[6]}
-              />
+              <IconMapPin size={16} stroke={1.5} color={theme.colors.gray[6]} />
               <Text size="sm" c="dimmed">
                 IUN Conference Hall, UDUTH Sokoto
               </Text>
